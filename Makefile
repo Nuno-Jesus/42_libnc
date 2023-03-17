@@ -1,42 +1,71 @@
+#_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_ COLORS _/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_
+RESET	= \033[0m
+BLACK 	= \033[1;30m
+RED 	= \033[1;31m
+GREEN 	= \033[1;32m
+YELLOW 	= \033[1;33m
+BLUE	= \033[1;34m
+PURPLE 	= \033[1;35m
+CYAN 	= \033[1;36m
+WHITE 	= \033[1;37m
+
+#_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_ COMMANDS _/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_
 CC = cc
-FLAGS = -Wall -Wextra -Werror
-DEPS = .
-RM = rm -f
-AR = ar -rc
+RM = rm -rf
+AR = ar -rcs
 
-TARGET = 	ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o \
-			ft_isprint.o ft_itoa.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o \
-			ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o \
-			ft_strdup.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o \
-			ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o
+#_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_ FLAGS _/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_
+CFLAGS	= -Wall -Wextra -Werror #-fsanitize=address
+MK		= --no-print-directory
 
-BONUS_TARGET = 	ft_lstadd_back.o ft_lstadd_front.o ft_lstclear.o \
-			ft_lstdelone.o ft_lstiter.o ft_lstlast.o \
-			ft_lstmap.o ft_lstnew.o ft_lstsize.o
+#_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_ FOLDERS _/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_
+DEPS			= . 
+SRCS			= .
+LIBFT_PATH		= libft
+GNL_PATH		= get_next_line
+PRINTF_PATH		= ft_printf
+MLX_PATH 		= mlx
+_SUBFOLDERS		= conversions is linked_list memory print string
+VPATH			= srcs $(addprefix $(SRCS)/, $(_SUBFOLDERS))
+OBJ_DIR			= objs
 
-NAME = libft.a
+#_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_ FILES _/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_
+NAME			= libnc.a
+_FILES			= ft_atoi ft_bzero ft_calloc ft_isalnum ft_isalpha ft_isascii ft_isdigit \
+					ft_isprint ft_itoa ft_memchr ft_memcmp ft_memcpy ft_memmove ft_memset \
+					ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd ft_split ft_strchr \
+					ft_strdup ft_striteri ft_strjoin ft_strlcat ft_strlcpy ft_strlen ft_strmapi \
+					ft_strncmp ft_strnstr ft_strrchr ft_strtrim ft_substr ft_tolower ft_toupper \
+					ft_lstadd_back ft_lstadd_front ft_lstclear ft_lstdelone ft_lstiter ft_lstlast \
+					ft_lstmap ft_lstnew ft_lstsize
+					
+OBJS			= $(_FILES:%=%.o)
+TARGET			= $(addprefix $(OBJ_DIR)/, $(OBJS))
 
-%.o : %.c 
-	$(CC) $(FLAGS) -c $< -o $@ -I $(DEPS)
-
+#_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_ RULES _/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_
 all: $(NAME)
 
-bonus: $(TARGET) $(BONUS_TARGET)
-	$(AR) $(NAME) $^
+$(NAME): $(OBJ_DIR) $(TARGET)
+	echo "[$(CYAN) Linking $(RESET)] $(GREEN)$(NAME)$(RESET)"
+	$(AR) $(NAME) $(TARGET)
+	
+	echo "$(GREEN)Done.$(RESET)"
+	
+$(OBJ_DIR)/%.o : $(SRCS)/%.c 
+	echo "[$(CYAN)Compiling$(RESET)] $(CFLAGS) $(GREEN)$<$(RESET)"
+	$(CC) $(CFLAGS) -c $< -o $@ -I $(DEPS)
 
-$(NAME): $(TARGET)
-	$(AR) $(NAME) $^
+$(OBJ_DIR) :
+	mkdir -p $(OBJ_DIR)
 
-clean:
-	$(RM) $(TARGET) $(BONUS_TARGET)
+clean:	
+	echo "[$(RED) Deleted $(RESET)] $(GREEN)$(OBJ_DIR)$(RESET)"
+	$(RM) $(OBJ_DIR)
 
 fclean: clean
-	$(RM) $(NAME) $(BONUS_TARGET)
+	echo "[$(RED) Deleted $(RESET)] $(GREEN)$(NAME)$(RESET)"
+	$(RM) $(NAME)
 
 re: fclean all
 
-rebonus: fclean bonus
-
-so:
-	$(CC) -nostartfiles -fPIC $(FLAGS) $(TARGET) $(BONUS_TARGET)
-	cc -nostartfiles -shared -o libft.so $(TARGET) $(BONUS_TARGET)
+.SILENT:
