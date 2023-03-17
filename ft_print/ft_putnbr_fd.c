@@ -6,18 +6,11 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:43:28 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/03/17 15:24:47 by marvin           ###   ########.fr       */
+/*   Updated: 2023/03/17 15:45:42 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libnc.h"
-
-static char	ft_tochar(int c)
-{
-	if (c >= 0 && c <= 9)
-		return (c + '0');
-	return (c);
-}
 
 void	ft_putnbr_fd(int n, int fd)
 {

@@ -1,35 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   conversions.h                                      :+:      :+:    :+:   */
+/*   ft_tochar.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 15:30:29 by marvin            #+#    #+#             */
-/*   Updated: 2023/03/17 15:30:29 by marvin           ###   ########.fr       */
+/*   Created: 2023/03/17 15:41:10 by marvin            #+#    #+#             */
+/*   Updated: 2023/03/17 15:41:10 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONVERSIONS_H
-# define CONVERSIONS_H
+#include "libnc.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <string.h>
-# include <limits.h>
-# include <unistd.h>
-# include <ctype.h>
-
-int		ft_atoi(const char *nptr);
-
-int		ft_toupper(int c);
-
-int		ft_tolower(int c);
-
-int     ft_tonum(int c);
-
-int     ft_tochar(int c);
-
-char	*ft_itoa(int n);
-
-#endif
+int ft_tochar(int c)
+{
+    if (c >= 0 && c <= 9)
+        return (c + '0');
+    return (c);
+}
