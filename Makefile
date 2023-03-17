@@ -19,13 +19,13 @@ CFLAGS	= -Wall -Wextra -Werror #-fsanitize=address
 MK		= --no-print-directory
 
 #_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_ FOLDERS _/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_
-DEPS			= . 
+DEPS			= includes 
 SRCS			= .
 LIBFT_PATH		= libft
 GNL_PATH		= get_next_line
 PRINTF_PATH		= ft_printf
 MLX_PATH 		= mlx
-_SUBFOLDERS		= conversions is linked_list memory print string
+_SUBFOLDERS		= ft_conversions ft_is ft_linked_list ft_memory ft_print ft_str
 VPATH			= srcs $(addprefix $(SRCS)/, $(_SUBFOLDERS))
 OBJ_DIR			= objs
 
