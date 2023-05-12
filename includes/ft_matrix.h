@@ -30,6 +30,6 @@ size_t	ft_matrix_size(void *matrix);
 
 void	ft_matrix_delete(void *matrix);
 
-void	ft_matrix_print(void *matrix, void (*f)());
+void	ft_matrix_print(void *matrix, void (*print)());
 
 #endif

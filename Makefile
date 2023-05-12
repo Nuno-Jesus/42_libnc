@@ -42,7 +42,7 @@ _STR			= ft_replace ft_split ft_strchr ft_strdup ft_striteri ft_strjoin ft_strlc
 					ft_strlcpy ft_strlen ft_strmapi ft_strncmp ft_strnstr ft_strrchr ft_strtrim ft_substr
 
 _MATRIX			= ft_matrix_new ft_matrix_delete ft_matrix_size ft_matrix_copy ft_matrix_append \
-					#ft_matrix_print
+					ft_matrix_print
 
 _FILES			= $(_CONVERSIONS) $(_IS) $(_LINKED_LISTS) $(_MATRIX) $(_MEMORY) $(_PRINT) $(_STR)
 OBJS			= $(_FILES:%=%.o)
