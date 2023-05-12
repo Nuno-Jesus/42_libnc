@@ -6,18 +6,19 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 18:50:44 by crypto            #+#    #+#             */
-/*   Updated: 2023/03/17 15:32:05 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/12 22:51:13 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBNC_H
 # define LIBNC_H
 
-# include "conversions.h"
-# include "is.h"
-# include "linked_list.h"
-# include "memory.h"
-# include "print.h"
-# include "str.h"
+# include "ft_conversions.h"
+# include "ft_is.h"
+# include "ft_linked_list.h"
+# include "ft_matrix.h"
+# include "ft_memory.h"
+# include "ft_print.h"
+# include "ft_str.h"
 
 #endif

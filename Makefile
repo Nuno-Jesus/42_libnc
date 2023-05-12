@@ -21,7 +21,7 @@ MK		= --no-print-directory
 #_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_ FOLDERS _/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_
 DEPS			= includes 
 SRCS			= .
-_SUBFOLDERS		= ft_conversions ft_is ft_linked_list ft_memory ft_print ft_str
+_SUBFOLDERS		= ft_conversions ft_is ft_linked_list ft_matrix ft_memory ft_print ft_str
 VPATH			= srcs $(addprefix $(SRCS)/, $(_SUBFOLDERS))
 OBJ_DIR			= bin
 
@@ -41,7 +41,9 @@ _PRINT			= ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd
 _STR			= ft_replace ft_split ft_strchr ft_strdup ft_striteri ft_strjoin ft_strlcat \
 					ft_strlcpy ft_strlen ft_strmapi ft_strncmp ft_strnstr ft_strrchr ft_strtrim ft_substr
 
-_FILES			= $(_CONVERSIONS) $(_IS) $(_LINKED_LISTS) $(_MEMORY) $(_PRINT) $(_STR)
+_MATRIX			= ft_matrix_new #ft_matrix_delete ft_matrix_append ft_matrix_copy ft_matrix_print
+
+_FILES			= $(_CONVERSIONS) $(_IS) $(_LINKED_LISTS) $(_MATRIX) $(_MEMORY) $(_PRINT) $(_STR)
 OBJS			= $(_FILES:%=%.o)
 TARGET			= $(addprefix $(OBJ_DIR)/, $(OBJS))
 
