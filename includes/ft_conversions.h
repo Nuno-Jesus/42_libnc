@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONVERSIONS_H
-# define CONVERSIONS_H
+#ifndef FT_CONVERSIONS_H
+# define FT_CONVERSIONS_H
 
 # include <stdio.h>
 # include <stdlib.h>
@@ -26,9 +26,9 @@ int		ft_toupper(int c);
 
 int		ft_tolower(int c);
 
-int     ft_tonum(int c);
+int		ft_tonum(int c);
 
-int     ft_tochar(int c);
+int		ft_tochar(int c);
 
 char	*ft_itoa(int n);
 

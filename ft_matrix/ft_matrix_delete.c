@@ -12,12 +12,12 @@
 
 #include "libnc.h"
 
-void	ft_matrix_delete(void *matrix)
+void	ft_matrix_delete(void *matrix, void (*del)())
 {
 	size_t	i;
 
 	i = -1;
 	while (((void **)matrix)[++i])
-		free(((void **)matrix)[i]);
+		del(((void **)matrix)[i]);
 	free(matrix);
 }

@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STR_H
-# define STR_H
+#ifndef FT_STR_H
+# define FT_STR_H
 
 # include <stdio.h>
 # include <stdlib.h>

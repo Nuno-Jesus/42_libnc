@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LINKED_LIST_H
-# define LINKED_LIST_H
+#ifndef FT_LINKED_LIST_H
+# define FT_LINKED_LIST_H
 
 # include <stdio.h>
 # include <stdlib.h>

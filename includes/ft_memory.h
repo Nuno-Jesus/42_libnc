@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MEMORY_H
-# define MEMORY_H
+#ifndef FT_MEMORY_H
+# define FT_MEMORY_H
 
 # include <stdio.h>
 # include <stdlib.h>

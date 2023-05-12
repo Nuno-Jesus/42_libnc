@@ -12,9 +12,9 @@
 
 #include "libnc.h"
 
-int ft_tonum(int c)
+int	ft_tonum(int c)
 {
-    if (c >= '0' && c <= '9')
-        return (c - '0');
-    return (c);
+	if (c >= '0' && c <= '9')
+		return (c - '0');
+	return (c);
 }

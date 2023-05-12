@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MATRIX_H
-# define MATRIX_H
+#ifndef FT_MATRIX_H
+# define FT_MATRIX_H
 
 # include <stdio.h>
 # include <stdlib.h>
@@ -20,16 +20,62 @@
 # include <unistd.h>
 # include <ctype.h>
 
+/**
+ * @brief Creates a new char matrix of given lines and columns. If columns is
+ * 0, the function will return with only the pointers to the lines.
+ * 
+ * @param lines The number of lines.
+ * @param columns The number of columns
+ * @return char** A pointer to the new matrix.
+ * @return NULL If the allocation fails.
+ */
 char	**ft_matrix_new(size_t lines, size_t columns);
 
+/**
+ * @brief Creates a duplicate of an existing matrix, using the copy function
+ * to help on duplicating inner data.
+ * 
+ * @param matrix The matrix to copy.
+ * @param copy The function containing the logic to copy the inner data.
+ * @return void* The pointer to the new matrix.
+ * @return NULL If the allocation fails.
+ */
 void	*ft_matrix_copy(void *matrix, void *(*copy)());
 
+/**
+ * @brief Appends a new field of data to a new matrix, by creating a new one
+ * with the result.
+ * 
+ * @param matrix The matrix to append the data to.
+ * @param data The data to append.
+ * @param copy The function containing the logic to copy the inner data.
+ * @return void* A pointer to the new matrix with the appended data.
+ */
 void	*ft_matrix_append(void *matrix, void *data, void *(*copy)());
 
+/**
+ * @brief Returns the size of a matrix.
+ * 
+ * @param matrix The matrix to get the size of.
+ * @return size_t The size of the matrix.
+ */
 size_t	ft_matrix_size(void *matrix);
 
-void	ft_matrix_delete(void *matrix);
+/**
+ * @brief Frees all the memory associated with a matrix, using del as
+ * a function to free the inner data.
+ * 
+ * @param matrix The matrix to free.
+ * @param del The function containing the logic to free the inner data.
+ */
+void	ft_matrix_delete(void *matrix, void (*del)());
 
+/**
+ * @brief Prints a matrix, using print as a function to print the inner data.
+ * 
+ * @param matrix The matrix to print.
+ * @param print The function containing the logic to print the inner data.
+ */
 void	ft_matrix_print(void *matrix, void (*print)());
 
 #endif
