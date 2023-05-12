@@ -1,6 +1,6 @@
 .vscode/
 a.out
-*/*.o
+*.o
 bin/
-libnc.a
+*.a
 main.c
