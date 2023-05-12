@@ -22,13 +22,13 @@
 
 char	**ft_matrix_new(size_t lines, size_t columns);
 
-void	ft_matrix_delete(void *matrix);
+void	*ft_matrix_copy(void *matrix);
 
 void	*ft_matrix_append(void *matrix, void *data);
 
 size_t	ft_matrix_size(void *matrix);
 
-void	*ft_matrix_copy(void *matrix);
+void	ft_matrix_delete(void *matrix);
 
 void	ft_matrix_print(void *matrix, void (*f)());
 
