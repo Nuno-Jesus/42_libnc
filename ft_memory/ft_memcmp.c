@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:40:42 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/03/17 15:24:35 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/12 20:08:45 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,39 +25,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/* 
-int main(int argc, char **argv)
-{
-	(void)argc;
-	
-	int size = atoi(argv[3]);
-	char *rest1 = strndup(argv[1], size);
-	char *rest2 = strndup(argv[2], size);
-	
-	printf("Sending argv[1] = \'%s\'\n", argv[1]);
-	printf("Sending argv[2] = \'%s\'\n", argv[2]);
-
-	printf("\n\t************** USING memcmp() **************\n\n");
-	
-	int res = memcmp(argv[1], argv[2], size);
-	if(res < 0)
-		printf("\"%s\" is less than \"%s\" (%d bytes) \n", rest1, rest2, size);
-	else if(res > 0)
-		printf("\"%s\" is bigger than \"%s\" (%d bytes) \n", rest1, rest2, size);
-	else
-		printf("\"%s\" is equal to \"%s\" (%d bytes) \n", rest1, rest2, size);
-	
-	printf("\n\t************** USING ft_memcmp() **************\n\n");
-
-	res = ft_memcmp(argv[1], argv[2], size);
-	if(res < 0)
-		printf("\"%s\" is less than \"%s\" (%d bytes) \n", rest1, rest2, size);
-	else if(res > 0)
-		printf("\"%s\" is bigger than \"%s\" (%d bytes) \n", rest1, rest2, size);
-	else
-		printf("\"%s\" is equal to \"%s\" (%d bytes) \n", rest1, rest2, size);
-
-	free(rest1);
-	free(rest2);
-}
- */

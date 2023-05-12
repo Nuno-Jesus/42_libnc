@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:44:06 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/03/17 15:24:52 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/12 20:09:44 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,19 +80,3 @@ char	**ft_split(char const *s, char c)
 	words[num] = NULL;
 	return (words);
 }
-/* 
-int main(int argc, char **argv)
-{	
-	(void)argc;
-	char **words;
-	
-	words = ft_split(argv[1], argv[2][0]);
-
-	int i = 0;
-	for(; words[i]; i++)
-		printf("words[%d] = \'%s\'\n", i, words[i]);
-	printf("words[%d] = NULL\n", i);
-
-	ft_delete_matrix(words);
-}
- */

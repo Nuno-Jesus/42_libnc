@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:47:01 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/03/17 15:25:02 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/12 20:11:53 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (ft_strlen(src));
 }
-/* 
-int main(int argc, char **argv)
-{
-	(void) argc;
-	
-	int size = atoi(argv[2]);
-	char dest[50] = {0};
-	
-	printf("Sending argv[1] = \"%s\"\n", argv[1]);
-	printf("Sending argv[2] = %d\n", size);
-	printf("Sending dest = \"%s\"\n", dest);
-	
-	size = ft_strlcpy(dest, argv[1], size);
-	printf("Returning dest = \"%s\"\n", dest);
-}
- */

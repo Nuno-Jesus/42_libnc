@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 11:49:31 by crypto            #+#    #+#             */
-/*   Updated: 2023/03/17 15:25:05 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/12 20:12:00 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	mapped[i] = '\0';
 	return (mapped);
 }
-/* 
-char change (unsigned int i, char c)
-{
-	return (c + i);
-}
-
-int main(int argc, char **argv)
-{
-	(void) argc;
-	char *res;
-	
-	printf("Sending \'%s\'\n", argv[1]);
-	res = ft_strmapi(argv[1], &change);
-	printf("Returning \'%s\'\n", res);	
-} */

@@ -57,21 +57,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-/* 
-int main(int argc, char **argv)
-{
-	(void)argc;
-	
-	//2147483647 -2147483648
-	int n = atoi(argv[1]);
-	char expected[50];
-	char *res = ft_itoa(n);
-
-	sprintf(expected, "%d", n);
-	printf("Sending: %d\n", n);
-	printf("Expected: \'%s\'\n", expected);
-	printf("Returning: \'%s\'\n", res);
-
-	free(res);
-}
- */

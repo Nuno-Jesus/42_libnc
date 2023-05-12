@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 18:52:30 by crypto            #+#    #+#             */
-/*   Updated: 2023/03/17 15:25:15 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/12 20:12:19 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,18 +34,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	res[i] = '\0';
 	return (res);
 }
-/* 
-int main(int argc, char **argv)
-{
-	(void) argc;
-	int start = atoi(argv[2]);
-	int len = atoi(argv[3]);
-	char *res = ft_substr(argv[1], start, len);
-
-	printf("Sending argv[1] = \'%s\'\n", argv[1]);
-	printf("Sending argv[2] = %d\n", start);
-	printf("Sending argv[3] = %d\n", len);
-
-	printf("Returning \'%s\'\n", res);
-}
- */

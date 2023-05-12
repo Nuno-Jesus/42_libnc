@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 14:25:40 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/03/17 15:24:58 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/12 20:09:58 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
-/* 
-void change (unsigned int i, char *c)
-{
-	*c = *c + i;
-}
-
-int main(int argc, char **argv)
-{
-	(void) argc;
-	
-	printf("Sending \'%s\'\n", argv[1]);
-	ft_striteri(argv[1], &change);
-	printf("Returning \'%s\'\n", argv[1]);	
-} */

@@ -23,18 +23,25 @@ DEPS			= includes
 SRCS			= .
 _SUBFOLDERS		= ft_conversions ft_is ft_linked_list ft_memory ft_print ft_str
 VPATH			= srcs $(addprefix $(SRCS)/, $(_SUBFOLDERS))
-OBJ_DIR			= objs
+OBJ_DIR			= bin
 
 #_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_ FILES _/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_
 NAME			= libnc.a
-_FILES			= ft_atoi ft_bzero ft_calloc ft_isalnum ft_isalpha ft_isascii ft_isdigit \
-					ft_isprint ft_itoa ft_memchr ft_memcmp ft_memcpy ft_memmove ft_memset \
-					ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd ft_split ft_strchr \
-					ft_strdup ft_striteri ft_strjoin ft_strlcat ft_strlcpy ft_strlen ft_strmapi \
-					ft_strncmp ft_strnstr ft_strrchr ft_strtrim ft_substr ft_tolower ft_tonum ft_tochar \
-					ft_toupper ft_lstadd_back ft_lstadd_front ft_lstclear ft_lstdelone ft_lstiter \
+
+_CONVERSIONS 	= ft_atoi ft_itoa ft_tochar ft_tolower ft_tonum ft_toupper
+
+_IS 			= ft_isalnum ft_isalpha ft_isascii ft_isdigit ft_isprint
+
+_LINKED_LISTS	= ft_lstadd_back ft_lstadd_front ft_lstclear ft_lstdelone ft_lstiter \
 					ft_lstlast ft_lstmap ft_lstnew ft_lstsize
-					
+
+_MEMORY			= ft_bzero ft_calloc ft_memchr ft_memcmp ft_memcpy ft_memmove ft_memset
+_PRINT			= ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd
+
+_STR			= ft_replace ft_split ft_strchr ft_strdup ft_striteri ft_strjoin ft_strlcat \
+					ft_strlcpy ft_strlen ft_strmapi ft_strncmp ft_strnstr ft_strrchr ft_strtrim ft_substr
+
+_FILES			= $(_CONVERSIONS) $(_IS) $(_LINKED_LISTS) $(_MEMORY) $(_PRINT) $(_STR)
 OBJS			= $(_FILES:%=%.o)
 TARGET			= $(addprefix $(OBJ_DIR)/, $(OBJS))
 

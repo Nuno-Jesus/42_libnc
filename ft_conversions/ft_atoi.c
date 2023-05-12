@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:37:34 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/03/17 15:33:37 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/12 20:06:48 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,17 +40,3 @@ int	ft_atoi(const char *nptr)
 		res = res * 10 + nptr[i++] - '0';
 	return (signal * res);
 }
-/* 
-int main(int argc, char **argv)
-{
-	(void) argc;
-
-	printf("\n\t>>> USING ft_atoi() <<<\n\n");
-	printf("Sending str = \'%s\'\n", argv[1]);
-	printf("Resulting in: %d\n", ft_atoi(argv[1]));
-	
-	printf("\n\t>>> USING atoi() <<<\n\n");
-	printf("Sending str = \'%s\'\n", argv[1]);
-	printf("Resulting in: %d\n", atoi(argv[1]));
-}
- */

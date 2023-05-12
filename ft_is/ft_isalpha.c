@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:37:54 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/03/17 15:24:05 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/12 20:07:13 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,4 @@ int	ft_isalpha(int c)
 {
 	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }
-/* 
-int main(int argc, char **argv)
-{
-	(void)argc;
-	
-	printf("\n\t>>> USING isalpha() <<<\n\n");
-	printf("Sending \'%c\'\n", argv[1][0]);
-	
-	if (isalpha(argv[1][0]))
-		printf("The char \'%c\' is alphabetic.\n", argv[1][0]);
-	else
-		printf("The char \'%c\' is not alphabetic.\n", argv[1][0]);
-	
-	printf("\n\t>>> USING ft_isalpha() <<<\n\n");
-	printf("Sending \'%c\'\n", argv[1][0]);
-	
-	if (ft_isalpha(argv[1][0]))
-		printf("The char \'%c\' is alphabetic.\n", argv[1][0]);
-	else
-		printf("The char \'%c\' is not alphabetic.\n", argv[1][0]);
-} */
+

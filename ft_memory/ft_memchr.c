@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:39:51 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/03/17 15:24:34 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/12 20:08:39 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,22 +25,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-/* 
-int main(int argc, char **argv)
-{
-	(void) argc;
-	
-	char *res;
-	int n = atoi(argv[3]);
-	int search = atoi(&argv[2][0]);
-	
-	printf("\n\t>>> : USING memchr() <<<\n\n");
-	
-	res = memchr(argv[1], search, n);
-	printf("Result:\n\tres = \'%s\'\n", res);
-	
-	printf("\n\t>>> : USING ft_memchr() <<<\n\n");
-	
-	res = ft_memchr(argv[1], search, n);
-	printf("Result:\n\tres =  \'%s\'\n", res);
-} */

@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:43:28 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/03/17 15:45:42 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/12 20:09:36 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(ft_tochar(num % 10), fd);
 	}
 }
-/* 
-int main(int argc, char **argv)
-{
-	(void) argc;
-	
-	//2147483647 -2147483648
-	ft_putnbr_fd(atoi(argv[1]), STDOUT_FILENO);
-}
- */

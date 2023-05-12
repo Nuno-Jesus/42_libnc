@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:48:41 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/03/17 15:25:14 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/12 20:12:16 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	return (new);
 }
-/* 
-int main(int argc, char **argv)
-{
-	(void)argc;
-	char *res = ft_strtrim(argv[1], argv[2]);
-
-	printf("Sending s1 = \'%s\'\n", argv[1]);
-	printf("Sending set = \'%s\'\n", argv[2]);
-	printf("Returning res = \'%s\'\n", res);
-} */

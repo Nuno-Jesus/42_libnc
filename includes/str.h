@@ -15,6 +15,7 @@
 
 # include <stdio.h>
 # include <stdlib.h>
+# include <stdint.h>
 # include <string.h>
 # include <limits.h>
 # include <unistd.h>
@@ -47,5 +48,17 @@ char	**ft_split(char const *s, char c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+/**
+ * @brief Given a string, replace the first ocurrence of old 
+ * with new and return the new string.
+ * 
+ * @param str The string to be modified.
+ * @param old The string to remove.
+ * @param new The string to add.
+ * @return char* A new pointer to the new string.
+ * @return NULL If the allocation fails OR if old is not found in str.
+ */
+char	*ft_replace(char *str, char *old, char *new);
 
 #endif

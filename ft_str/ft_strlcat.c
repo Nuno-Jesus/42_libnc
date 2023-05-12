@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:46:54 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/03/17 15:25:01 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/12 20:10:04 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dst_len + k] = '\0';
 	return (dst_len + src_len);
 }
-/* 
-int main(){
-	char dest[10] = "Hello";
-	char src[] = "World";
-	
-	printf("Sending str1 = \"%s\" and str2 = \"%s\"\n", dest, src); 
-	int res = ft_strlcat(dest, src, 1);
-	
-	printf("strlcat return = %d\n", res);
-	printf("Returning str1 = \"%s\" and str2 = \"%s\"\n", dest, res, src); 
-}
- */

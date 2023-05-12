@@ -1,5 +1,6 @@
 .vscode/
 a.out
 */*.o
-objs/
+bin/
+libnc.a
 main.c
