@@ -22,7 +22,7 @@
 
 char	**ft_matrix_new(size_t lines, size_t columns);
 
-void	*ft_matrix_copy(void *matrix);
+void	*ft_matrix_copy(void *matrix, void *(*copy)());
 
 void	*ft_matrix_append(void *matrix, void *data);
 
