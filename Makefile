@@ -25,7 +25,7 @@ MK		= --no-print-directory
 
 DEPS			= includes 
 SRCS			= .
-_SUBFOLDERS		= binary_tree conversions is linked_list matrix memory pair print str
+_SUBFOLDERS		= binary_search_tree conversions is linked_list matrix memory pair print str
 VPATH			= srcs $(addprefix $(SRCS)/ft_, $(_SUBFOLDERS))
 OBJ_DIR			= bin
 
@@ -33,8 +33,8 @@ OBJ_DIR			= bin
 
 NAME			= libnc.a
 
-_BINARY_TREE	= btree_new btree_insert btree_traverse btree_delete btree_clear \
-					btree_print btree_copy btree_deepcopy btree_find
+_BINARY_TREE	= bstree_new bstree_insert bstree_traverse bstree_delete bstree_clear \
+					bstree_print bstree_copy bstree_deepcopy bstree_find
 
 _CONVERSIONS 	= atoi itoa tochar tolower tonum toupper
 

@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_btree_print.c                                   :+:      :+:    :+:   */
+/*   ft_bstree_insert.c                                  :+:      :+:    :+:  */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/13 18:23:49 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/13 18:23:49 by marvin           ###   ########.fr       */
+/*   Created: 2023/05/13 17:20:41 by marvin            #+#    #+#             */
+/*   Updated: 2023/05/13 17:20:41 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libnc.h"
 
-static void helper(t_btree *node, void (*print)())
-{
-	for (uint32_t i = 0; i < node->depth; i++)
-		ft_putstr_fd("│   ", STDOUT_FILENO);
-	if (node->left)
-		ft_putstr_fd("├── ", STDOUT_FILENO);
-	else 
-		ft_putstr_fd("└── ", STDOUT_FILENO);
-	print(node);
-}
-
-void	ft_btree_print(t_btree *tree, void (*print)())
+t_bstree	*ft_bstree_insert(t_bstree *tree, void *data, int (*cmp)(), \
+	uint32_t depth)
 {
 	if (!tree)
-		return ;
-	helper(tree, print);
-	ft_btree_print(tree->right, print);
-	ft_btree_print(tree->left, print);
+		return (ft_bstree_new(data, depth));
+	else if (cmp(data, tree->content) < 0)
+		tree->left = ft_bstree_insert(tree->left, data, cmp, depth + 1);
+	else
+		tree->right = ft_bstree_insert(tree->right, data, cmp, depth + 1);
+	return (tree);
 }

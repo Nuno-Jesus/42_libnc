@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_btree_copy.c                                    :+:      :+:    :+:   */
+/*   ft_bstree_deepcopy.c                                :+:      :+:    :+:  */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/13 18:34:38 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/13 18:34:38 by marvin           ###   ########.fr       */
+/*   Created: 2023/05/13 18:37:20 by marvin            #+#    #+#             */
+/*   Updated: 2023/05/13 18:37:20 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libnc.h"
 
-t_btree	*ft_btree_copy(t_btree *node, void *(*copy)())
+t_bstree	*ft_bstree_deepcopy(t_bstree *tree, void *(*copy)())
 {
-	t_btree	*dup;
-	void	*content;
+	t_bstree	*dup;
 
-	content = node->content;
-	if (copy)
-		content = copy(node->content);
-	dup = ft_btree_new(content, node->depth);
-	if (!dup)
+	if (!tree)
 		return (NULL);
+	dup = ft_bstree_copy(tree, copy);
+	dup->left = ft_bstree_deepcopy(tree->left, copy);
+	dup->right = ft_bstree_deepcopy(tree->right, copy);
 	return (dup);
 }

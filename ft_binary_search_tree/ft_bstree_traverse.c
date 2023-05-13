@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_btree_traverse.c                                :+:      :+:    :+:   */
+/*   ft_bstree_traverse.c                                :+:      :+:    :+:  */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "libnc.h"
 
-static void postorder(t_btree **tree, void (*f)())
+static void	postorder(t_bstree **tree, void (*f)())
 {
 	if (!(*tree))
 		return ;
@@ -22,7 +22,7 @@ static void postorder(t_btree **tree, void (*f)())
 	postorder(&(*tree)->left, f);
 }
 
-static void preorder(t_btree **tree, void (*f)())
+static void	preorder(t_bstree **tree, void (*f)())
 {
 	if (!(*tree))
 		return ;
@@ -32,7 +32,7 @@ static void preorder(t_btree **tree, void (*f)())
 		(*f)(*tree);
 }
 
-static void inorder(t_btree **tree, void (*f)())
+static void	inorder(t_bstree **tree, void (*f)())
 {
 	if (!(*tree))
 		return ;
@@ -42,7 +42,7 @@ static void inorder(t_btree **tree, void (*f)())
 	inorder(&(*tree)->left, f);
 }
 
-void	ft_btree_traverse(t_btree **tree, void (*f)(), t_traversal type)
+void	ft_bstree_traverse(t_bstree **tree, void (*f)(), t_traversal type)
 {
 	if (!tree)
 		return ;
