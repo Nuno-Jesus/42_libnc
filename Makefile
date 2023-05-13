@@ -34,7 +34,7 @@ OBJ_DIR			= bin
 NAME			= libnc.a
 
 _BINARY_TREE	= btree_new btree_insert btree_traverse btree_delete btree_clear \
-					btree_print
+					btree_print btree_copy btree_deepcopy
 
 _CONVERSIONS 	= atoi itoa tochar tolower tonum toupper
 

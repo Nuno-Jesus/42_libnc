@@ -39,9 +39,9 @@ typedef struct s_btree
 
 t_btree	*ft_btree_new(void *content, uint32_t depth);
 
-t_btree	*ft_btree_copy(t_btree *node, void (*copy)());
+t_btree	*ft_btree_copy(t_btree *node, void *(*copy)());
 
-t_btree	*ft_btree_deepcopy(t_btree *tree, void (*copy)());
+t_btree	*ft_btree_deepcopy(t_btree *tree, void *(*copy)());
 
 t_btree	*ft_btree_insert(t_btree *tree, void *data, int (*cmp)(), \
 	uint32_t depth);
