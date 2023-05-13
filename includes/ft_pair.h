@@ -30,7 +30,7 @@ t_pair	*ft_pair_new(void *key, void *value);
 
 t_pair	*ft_pair_copy(t_pair *pair, void *(*keycpy)(), void *(*valcpy)());
 
-t_pair	*ft_pair_swap(t_pair *pair);
+t_pair	*ft_pair_swap(t_pair *pair, void *(*keycpy)(), void *(*valcpy)());
 
 char	*ft_pair_tostring(t_pair *pair);
 
