@@ -44,7 +44,7 @@ _STR			= ft_replace ft_split ft_strchr ft_strdup ft_striteri ft_strjoin ft_strlc
 _MATRIX			= ft_matrix_new ft_matrix_delete ft_matrix_size ft_matrix_copy ft_matrix_append \
 					ft_matrix_print
 
-_PAIR 			= ft_pair_new #ft_pair_delete ft_pair_print ft_pair_copy ft_pair_swap
+_PAIR 			= ft_pair_new ft_pair_print #ft_pair_delete ft_pair_copy ft_pair_swap
 _FILES			= $(_CONVERSIONS) $(_IS) $(_LINKED_LISTS) $(_MATRIX) $(_MEMORY) $(_PAIR) \
 					$(_PRINT) $(_STR)
 OBJS			= $(_FILES:%=%.o)

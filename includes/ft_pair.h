@@ -36,6 +36,6 @@ char	*ft_pair_tostring(t_pair *pair);
 
 void	ft_pair_delete(t_pair *pair, void (*del1)(), void (*del2)());
 
-void	ft_pair_print(t_pair *pair);
+void	ft_pair_print(t_pair *pair, void (*p1)(), void (*p2)());
 
 #endif 
