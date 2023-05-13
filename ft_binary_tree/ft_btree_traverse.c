@@ -18,16 +18,16 @@ static void postorder(t_btree **tree, void (*f)())
 		return ;
 	if (*f)
 		(*f)(*tree);
-	postorder(&(*tree)->left, f);
 	postorder(&(*tree)->right, f);
+	postorder(&(*tree)->left, f);
 }
 
 static void preorder(t_btree **tree, void (*f)())
 {
 	if (!(*tree))
 		return ;
-	preorder(&(*tree)->left, f);
 	preorder(&(*tree)->right, f);
+	preorder(&(*tree)->left, f);
 	if (*f)
 		(*f)(*tree);
 }

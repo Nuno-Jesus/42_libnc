@@ -52,7 +52,7 @@ void	ft_btree_delete(t_btree *node, void (*del)());
 
 void	ft_btree_clear(t_btree *tree, void (*del)());
 
-void	ft_btree_print(t_btree *tree);
+void	ft_btree_print(t_btree *tree, void (*print)());
 
 void	ft_btree_traverse(t_btree **tree, void (*f)(), t_traversal type);
 
