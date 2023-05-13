@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_list_delone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,10 +12,10 @@
 
 #include "libnc.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_list_delone(t_list *list, void (*del)(void *))
 {
-	if (!lst || !del)
+	if (!list || !del)
 		return ;
-	del(lst->content);
-	free(lst);
+	del(list->content);
+	free(list);
 }

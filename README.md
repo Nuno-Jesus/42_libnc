@@ -164,39 +164,39 @@ At 42, the C projects are built following a bunch of rules that enforce good cod
 		</tr>
 		<tr>
 			<td rowspan=9><strong>Bonus Part / 9</strong></td>
-			<td>ft_lstadd_back</td>
+			<td>ft_list_add_back</td>
 			<td>✅</td>
 		</tr>
 		<tr>
-			<td>ft_lstadd_front</td>
+			<td>ft_list_add_front</td>
 			<td>✅</td>
 		</tr>
 		<tr>
-			<td>ft_lstclear</td>
+			<td>ft_list_clear</td>
 			<td>✅</td>
 		</tr>
 		<tr>
-			<td>ft_lstdelone</td>
+			<td>ft_list_delone</td>
 			<td>✅</td>
 		</tr>
 		<tr>
-			<td>ft_lstiter</td>
+			<td>ft_list_iter</td>
 			<td>✅</td>
 		</tr>
 		<tr>
-			<td>ft_lstlast</td>
+			<td>ft_list_last</td>
 			<td>✅</td>
 		</tr>
 		<tr>
-			<td>ft_lstmap</td>
+			<td>ft_list_map</td>
 			<td>✅</td>
 		</tr>
 		<tr>
-			<td>ft_lstnew</td>
+			<td>ft_list_new</td>
 			<td>✅</td>
 		</tr>
 		<tr>
-			<td>ft_lstsize</td>
+			<td>ft_list_size</td>
 			<td>✅</td>
 		</tr>
 	</tbody>

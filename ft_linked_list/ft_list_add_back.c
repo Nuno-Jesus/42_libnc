@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_list_add_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/02 18:38:54 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/05/12 20:07:57 by marvin           ###   ########.fr       */
+/*   Created: 2022/11/02 18:38:24 by ncarvalh          #+#    #+#             */
+/*   Updated: 2023/05/12 20:07:34 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libnc.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_list_add_back(t_list **list, t_list *new)
 {
-	if (!lst || !f)
+	t_list	*last;
+
+	if (!new || !list)
 		return ;
-	while (lst != NULL)
+	if (!(*list))
+		*list = new;
+	else
 	{
-		f(lst->content);
-		lst = lst->next;
+		last = ft_list_last(*list);
+		last->next = new;
 	}
 }

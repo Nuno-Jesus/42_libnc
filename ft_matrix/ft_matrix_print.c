@@ -19,5 +19,7 @@ void	ft_matrix_print(void *matrix, void (*print)())
 	i = -1;
 	while (((void **)matrix)[++i])
 		(*print)(((void **)matrix)[i], i);
-	ft_putendl_fd("NULL", STDOUT_FILENO);
+	ft_putstr_fd("matrix[", STDOUT_FILENO);
+	ft_putnbr_fd(i, STDOUT_FILENO);
+	ft_putendl_fd("]=NULL", STDOUT_FILENO);
 }

@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_list_add_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/02 18:39:31 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/05/12 20:08:20 by marvin           ###   ########.fr       */
+/*   Created: 2022/11/02 18:38:42 by ncarvalh          #+#    #+#             */
+/*   Updated: 2023/05/12 20:07:40 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libnc.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_list_add_front(t_list **list, t_list *new)
 {
-	int		i;
-
-	i = 0;
-	while (lst != NULL)
+	if (!new || !list)
+		return ;
+	if (!(*list))
+		*list = new;
+	else
 	{
-		lst = lst->next;
-		i++;
-	}
-	return (i);
+		new->next = *list;
+		*list = new;
+	}	
 }

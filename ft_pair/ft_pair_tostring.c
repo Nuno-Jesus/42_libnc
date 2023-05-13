@@ -12,7 +12,7 @@
 
 #include "libnc.h"
 
-char	*ft_pair_tostring(t_pair *pair, char *(*keystr)(), char *(*valstr)())
+char	*ft_pair_tostring(t_pair *pair, char *(*keystr)(), char *(*valistr)())
 {
 	char	*key;
 	char	*value;
@@ -20,7 +20,7 @@ char	*ft_pair_tostring(t_pair *pair, char *(*keystr)(), char *(*valstr)())
 	char	*res;
 
 	key = keystr(pair->key);
-	value = valstr(pair->value);
+	value = valistr(pair->value);
 	tmp = ft_strjoin("pair[\'", key);
 	res = ft_strjoin(tmp, "\']=\'");
 	free(tmp);

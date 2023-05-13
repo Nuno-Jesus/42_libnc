@@ -12,13 +12,13 @@
 
 #include "libnc.h"
 
-void	ft_pair_print(t_pair *pair, char *(*keystr)(), char *(*valstr)())
+void	ft_pair_print(t_pair *pair, char *(*keystr)(), char *(*valistr)())
 {
 	char	*key;
 	char	*value;
 
 	key = keystr(pair->key);
-	value = valstr(pair->value);
+	value = valistr(pair->value);
 	ft_putstr_fd("pair[", STDOUT_FILENO);
 	ft_putstr_fd(key, STDOUT_FILENO);
 	ft_putstr_fd("]=", STDOUT_FILENO);

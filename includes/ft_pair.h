@@ -67,15 +67,15 @@ t_pair	*ft_pair_swap(t_pair *pair, void *(*keycpy)(), void *(*valcpy)());
 
 /**
  * @brief Converts the given pair into a string using the provided keystr and
- * valstr functions.
+ * valistr functions.
  * 
  * @param pair The pair to convert
  * @param keystr The function to convert the key to a string
- * @param valstr The function to convert the value to a string
+ * @param valistr The function to convert the value to a string
  * @return char* A pointer to the new string
  * @return NULL If allocation fails
  */
-char	*ft_pair_tostring(t_pair *pair, char *(*keystr)(), char *(*valstr)());
+char	*ft_pair_tostring(t_pair *pair, char *(*keystr)(), char *(*valistr)());
 
 /**
  * @brief Frees the given pair using the provided keydel and valdel functions.
@@ -89,12 +89,12 @@ char	*ft_pair_tostring(t_pair *pair, char *(*keystr)(), char *(*valstr)());
 void	ft_pair_delete(t_pair *pair, void (*keydel)(), void (*valdel)());
 
 /**
- * @brief Prints the given pair using the provided keystr and valstr functions.
+ * @brief Prints the given pair using the provided keystr and valistr functions.
  * 
  * @param pair The pair to print
  * @param keystr The function to convert the key to a string
- * @param valstr The function to convert the value to a string
+ * @param valistr The function to convert the value to a string
  */
-void	ft_pair_print(t_pair *pair, char *(*keystr)(), char *(*valstr)());
+void	ft_pair_print(t_pair *pair, char *(*keystr)(), char *(*valistr)());
 
 #endif 

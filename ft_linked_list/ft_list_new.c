@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_list_new.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/02 18:38:42 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/05/12 20:07:40 by marvin           ###   ########.fr       */
+/*   Created: 2022/11/02 18:39:07 by ncarvalh          #+#    #+#             */
+/*   Updated: 2023/05/12 20:08:14 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libnc.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+t_list	*ft_list_new(void *content)
 {
-	if (!new || !lst)
-		return ;
-	if (!(*lst))
-		*lst = new;
-	else
-	{
-		new->next = *lst;
-		*lst = new;
-	}	
+	t_list	*new;
+
+	new = (t_list *)malloc(sizeof(t_list));
+	if (!new)
+		return (NULL);
+	new->next = NULL;
+	new->content = content;
+	return (new);
 }

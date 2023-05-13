@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_list_iter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/02 18:38:24 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/05/12 20:07:34 by marvin           ###   ########.fr       */
+/*   Created: 2022/11/02 18:38:54 by ncarvalh          #+#    #+#             */
+/*   Updated: 2023/05/12 20:07:57 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libnc.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_list_iter(t_list *list, void (*f)(void *))
 {
-	t_list	*last;
-
-	if (!new || !lst)
+	if (!list || !f)
 		return ;
-	if (!(*lst))
-		*lst = new;
-	else
+	while (list != NULL)
 	{
-		last = ft_lstlast(*lst);
-		last->next = new;
+		f(list->content);
+		list = list->next;
 	}
 }

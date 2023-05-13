@@ -32,8 +32,8 @@ _CONVERSIONS 	= atoi itoa tochar tolower tonum toupper
 
 _IS 			= isalnum isalpha isascii isdigit isprint
 
-_LINKED_LISTS	= lstadd_back lstadd_front lstclear lstdelone lstiter \
-					lstlast lstmap lstnew lstsize
+_LINKED_LISTS	= list_add_back list_add_front list_clear list_delone list_iter \
+					list_last list_map list_new list_size
 
 _MEMORY			= bzero calloc memchr memcmp memcpy memmove memset
 _PRINT			= putchar_fd putendl_fd putnbr_fd putstr_fd
