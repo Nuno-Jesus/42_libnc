@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_replace_all.c                                   :+:      :+:    :+:   */
+/*   ft_list_at.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/13 15:35:18 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/13 15:35:18 by marvin           ###   ########.fr       */
+/*   Created: 2023/05/13 16:35:23 by marvin            #+#    #+#             */
+/*   Updated: 2023/05/13 16:35:23 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libnc.h"
 
-char	*ft_replace_all(char *str, char *old, char *new)
+t_list	*ft_list_at(t_list *begin_list, unsigned int nbr)
 {
-	char	*res;
-	char	*tmp;
-
-	res = ft_strdup(str);
-	while (ft_strnstr(res, old, ft_strlen(res)))
-	{
-		tmp = res;
-		res = ft_replace(res, old, new);
-		free(tmp);
-	}
-	return (res);
+	while (begin_list && nbr--)
+		begin_list = begin_list->next;
+	return (begin_list);
 }

@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_replace_all.c                                   :+:      :+:    :+:   */
+/*   ft_list_reverse.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/13 15:35:18 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/13 15:35:18 by marvin           ###   ########.fr       */
+/*   Created: 2023/05/13 16:36:03 by marvin            #+#    #+#             */
+/*   Updated: 2023/05/13 16:36:03 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libnc.h"
 
-char	*ft_replace_all(char *str, char *old, char *new)
+void	ft_list_reverse(t_list **begin_list)
 {
-	char	*res;
-	char	*tmp;
+	t_list	*curr;
+	t_list	*aux;
+	t_list	*list;
 
-	res = ft_strdup(str);
-	while (ft_strnstr(res, old, ft_strlen(res)))
+	if (!begin_list)
+		return ;
+	list = NULL;
+	curr = *begin_list;
+	while (curr)
 	{
-		tmp = res;
-		res = ft_replace(res, old, new);
-		free(tmp);
+		aux = curr->next;
+		curr->next = list;
+		list = curr;
+		curr = aux;
 	}
-	return (res);
+	*begin_list = list;
 }
