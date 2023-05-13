@@ -43,7 +43,7 @@ t_btree	*ft_btree_copy(t_btree *node, void (*copy)());
 
 t_btree	*ft_btree_deepcopy(t_btree *tree, void (*copy)());
 
-t_btree	*ft_btree_insert(t_btree **tree, t_btree *node, bool (*cmp)());
+t_btree	*ft_btree_insert(t_btree *tree, t_btree *node, int (*cmp)());
 
 t_btree	*ft_btree_find(t_btree *tree, void *data, bool (*cmp)());
 
