@@ -46,7 +46,7 @@ t_btree	*ft_btree_deepcopy(t_btree *tree, void *(*copy)());
 t_btree	*ft_btree_insert(t_btree *tree, void *data, int (*cmp)(), \
 	uint32_t depth);
 	
-t_btree	*ft_btree_find(t_btree *tree, void *data, bool (*cmp)());
+t_btree	*ft_btree_find(t_btree *tree, void *data, int (*cmp)());
 
 void	ft_btree_delete(t_btree *node, void (*del)());
 
