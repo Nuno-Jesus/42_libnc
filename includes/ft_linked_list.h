@@ -73,4 +73,6 @@ void	ft_list_reverse(t_list **begin_list);
  * @return NULL If no node matches the reference data
  */
 t_list	*ft_list_find(t_list *begin_list, void *data_ref, int (*cmp)());
+
+// char **ft_list_to_matrix(t_list *list);
 #endif

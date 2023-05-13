@@ -46,6 +46,7 @@ void	*ft_matrix_copy(void *matrix, void *(*copy)());
  * @brief Appends a new field of data to a new matrix, by creating a new one
  * with the result.
  * 
+ * @note It does not free the memory of the original matrix
  * @param matrix The matrix to append the data to.
  * @param data The data to append.
  * @param copy The function containing the logic to copy the inner data.
