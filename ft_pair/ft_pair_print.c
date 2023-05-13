@@ -12,8 +12,17 @@
 
 #include "libnc.h"
 
-void	ft_pair_print(t_pair *pair, void (*p1)(), void (*p2)())
+void	ft_pair_print(t_pair *pair, char *(*p1)(), char *(*p2)())
 {
-	p1(pair->key);
-	p2(pair->value);
+	char	*key;
+	char	*value;
+
+	key = p1(pair->key);
+	value = p2(pair->value);
+	ft_putstr_fd("pair[", STDOUT_FILENO);
+	ft_putstr_fd(key, STDOUT_FILENO);
+	ft_putstr_fd("]=", STDOUT_FILENO);
+	ft_putendl_fd(value, STDOUT_FILENO);
+	free(key);
+	free(value);
 }
