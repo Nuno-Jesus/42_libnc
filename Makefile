@@ -38,7 +38,7 @@ _LINKED_LISTS	= lstadd_back lstadd_front lstclear lstdelone lstiter \
 _MEMORY			= bzero calloc memchr memcmp memcpy memmove memset
 _PRINT			= putchar_fd putendl_fd putnbr_fd putstr_fd
 
-_STR			= replace split strchr strdup striteri strjoin strlcat \
+_STR			= replace replace_all split strchr strdup striteri strjoin strlcat \
 					strlcpy strlen strmapi strncmp strnstr strrchr strtrim substr
 
 _MATRIX			= matrix_new matrix_delete matrix_size matrix_copy matrix_append \

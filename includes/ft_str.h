@@ -53,6 +53,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
  * @brief Given a string, replace the first ocurrence of old 
  * with new and return the new string.
  * 
+ * @note It does not free the memory of either str, old or new.
  * @param str The string to be modified.
  * @param old The string to remove.
  * @param new The string to add.
@@ -61,6 +62,17 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
  */
 char	*ft_replace(char *str, char *old, char *new);
 
-//ft_replace_all
+/**
+ * @brief Given a string, replace all ocurrences of old 
+ * with new and return the new string.
+ * 
+ * @note It does not free the memory of either str, old or new.
+ * @param str The string to be modified.
+ * @param old The string to remove.
+ * @param new The string to add.
+ * @return char* A new pointer to the new string.
+ * @return NULL If the allocation fails OR if old is not found in str.
+ */
+char	*ft_replace_all(char *str, char *old, char *new);
 
 #endif
