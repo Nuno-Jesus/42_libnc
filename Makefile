@@ -28,26 +28,26 @@ OBJ_DIR			= bin
 #_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_ FILES _/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_
 NAME			= libnc.a
 
-_CONVERSIONS 	= ft_atoi ft_itoa ft_tochar ft_tolower ft_tonum ft_toupper
+_CONVERSIONS 	= atoi itoa tochar tolower tonum toupper
 
-_IS 			= ft_isalnum ft_isalpha ft_isascii ft_isdigit ft_isprint
+_IS 			= isalnum isalpha isascii isdigit isprint
 
-_LINKED_LISTS	= ft_lstadd_back ft_lstadd_front ft_lstclear ft_lstdelone ft_lstiter \
-					ft_lstlast ft_lstmap ft_lstnew ft_lstsize
+_LINKED_LISTS	= lstadd_back lstadd_front lstclear lstdelone lstiter \
+					lstlast lstmap lstnew lstsize
 
-_MEMORY			= ft_bzero ft_calloc ft_memchr ft_memcmp ft_memcpy ft_memmove ft_memset
-_PRINT			= ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd
+_MEMORY			= bzero calloc memchr memcmp memcpy memmove memset
+_PRINT			= putchar_fd putendl_fd putnbr_fd putstr_fd
 
-_STR			= ft_replace ft_split ft_strchr ft_strdup ft_striteri ft_strjoin ft_strlcat \
-					ft_strlcpy ft_strlen ft_strmapi ft_strncmp ft_strnstr ft_strrchr ft_strtrim ft_substr
+_STR			= replace split strchr strdup striteri strjoin strlcat \
+					strlcpy strlen strmapi strncmp strnstr strrchr strtrim substr
 
-_MATRIX			= ft_matrix_new ft_matrix_delete ft_matrix_size ft_matrix_copy ft_matrix_append \
-					ft_matrix_print
+_MATRIX			= matrix_new matrix_delete matrix_size matrix_copy matrix_append \
+					matrix_print
 
-_PAIR 			= ft_pair_new ft_pair_print ft_pair_copy ft_pair_swap ft_pair_delete 
+_PAIR 			= pair_new pair_print pair_copy pair_swap pair_delete pair_tostring
 _FILES			= $(_CONVERSIONS) $(_IS) $(_LINKED_LISTS) $(_MATRIX) $(_MEMORY) $(_PAIR) \
 					$(_PRINT) $(_STR)
-OBJS			= $(_FILES:%=%.o)
+OBJS			= $(_FILES:%=ft_%.o)
 TARGET			= $(addprefix $(OBJ_DIR)/, $(OBJS))
 
 #_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_ RULES _/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_

@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:46:42 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/05/12 20:13:05 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/13 15:16:34 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len;
 
 	len = ft_strlen(s1) + ft_strlen(s2);
-	res = (char *)malloc(len) + 1;
+	res = (char *)malloc(len + 1);
 	if (res == NULL)
 		return (NULL);
 	res[0] = '\0';

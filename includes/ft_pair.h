@@ -32,10 +32,10 @@ t_pair	*ft_pair_copy(t_pair *pair, void *(*keycpy)(), void *(*valcpy)());
 
 t_pair	*ft_pair_swap(t_pair *pair, void *(*keycpy)(), void *(*valcpy)());
 
-char	*ft_pair_tostring(t_pair *pair);
+char	*ft_pair_tostring(t_pair *pair, char *(*keystr)(), char *(*valstr)());
 
 void	ft_pair_delete(t_pair *pair, void (*keydel)(), void (*valdel)());
 
-void	ft_pair_print(t_pair *pair, char *(*p1)(), char *(*p2)());
+void	ft_pair_print(t_pair *pair, char *(*keystr)(), char *(*valstr)());
 
 #endif 
