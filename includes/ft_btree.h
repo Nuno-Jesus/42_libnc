@@ -26,25 +26,26 @@ typedef enum e_traversal
 {
 	PREORDER,
 	INORDER,
-	POSTORDER,
-	LEVEL
+	POSTORDER
 }t_traversal;
 
 typedef struct s_btree
 {
 	void			*content;
+	uint32_t		depth;
 	struct s_btree	*left;
 	struct s_btree	*right;
 }t_btree;
 
-t_btree	*ft_btree_new(void *content);
+t_btree	*ft_btree_new(void *content, uint32_t depth);
 
 t_btree	*ft_btree_copy(t_btree *node, void (*copy)());
 
 t_btree	*ft_btree_deepcopy(t_btree *tree, void (*copy)());
 
-t_btree	*ft_btree_insert(t_btree *tree, t_btree *node, int (*cmp)());
-
+t_btree	*ft_btree_insert(t_btree *tree, void *data, int (*cmp)(), \
+	uint32_t depth);
+	
 t_btree	*ft_btree_find(t_btree *tree, void *data, bool (*cmp)());
 
 void	ft_btree_delete(t_btree *node, void (*del)());

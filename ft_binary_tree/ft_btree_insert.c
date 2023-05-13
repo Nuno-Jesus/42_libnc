@@ -12,13 +12,14 @@
 
 #include "libnc.h"
 
-t_btree	*ft_btree_insert(t_btree *tree, t_btree *node, int (*cmp)())
+t_btree	*ft_btree_insert(t_btree *tree, void *data, int (*cmp)(), \
+	uint32_t depth)
 {
-	if (!(tree))
-		return (node);
-	else if (cmp(node->content, tree->content) < 0)
-		tree->left = ft_btree_insert(tree->left, node, cmp);
+	if (!tree)
+		return (ft_btree_new(data, depth));
+	else if (cmp(data, tree->content) < 0)
+		tree->left = ft_btree_insert(tree->left, data, cmp, depth + 1);
 	else
-		tree->right = ft_btree_insert(tree->right, node, cmp);
+		tree->right = ft_btree_insert(tree->right, data, cmp, depth + 1);
 	return (tree);
 }
