@@ -61,4 +61,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
  */
 char	*ft_replace(char *str, char *old, char *new);
 
+//ft_replace_all
+
 #endif

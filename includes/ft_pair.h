@@ -34,7 +34,7 @@ t_pair	*ft_pair_swap(t_pair *pair, void *(*keycpy)(), void *(*valcpy)());
 
 char	*ft_pair_tostring(t_pair *pair);
 
-void	ft_pair_delete(t_pair *pair, void (*del1)(), void (*del2)());
+void	ft_pair_delete(t_pair *pair, void (*keydel)(), void (*valdel)());
 
 void	ft_pair_print(t_pair *pair, char *(*p1)(), char *(*p2)());
 
