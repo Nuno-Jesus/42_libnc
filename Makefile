@@ -21,8 +21,8 @@ MK		= --no-print-directory
 #_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_ FOLDERS _/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_
 DEPS			= includes 
 SRCS			= .
-_SUBFOLDERS		= ft_conversions ft_is ft_linked_list ft_matrix ft_memory ft_print ft_str
-VPATH			= srcs $(addprefix $(SRCS)/, $(_SUBFOLDERS))
+_SUBFOLDERS		= conversions is linked_list matrix memory pair print str
+VPATH			= srcs $(addprefix $(SRCS)/ft_, $(_SUBFOLDERS))
 OBJ_DIR			= bin
 
 #_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_ FILES _/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_
@@ -44,7 +44,9 @@ _STR			= ft_replace ft_split ft_strchr ft_strdup ft_striteri ft_strjoin ft_strlc
 _MATRIX			= ft_matrix_new ft_matrix_delete ft_matrix_size ft_matrix_copy ft_matrix_append \
 					ft_matrix_print
 
-_FILES			= $(_CONVERSIONS) $(_IS) $(_LINKED_LISTS) $(_MATRIX) $(_MEMORY) $(_PRINT) $(_STR)
+_PAIR 			= ft_pair_new #ft_pair_delete ft_pair_print ft_pair_copy ft_pair_swap
+_FILES			= $(_CONVERSIONS) $(_IS) $(_LINKED_LISTS) $(_MATRIX) $(_MEMORY) $(_PAIR) \
+					$(_PRINT) $(_STR)
 OBJS			= $(_FILES:%=%.o)
 TARGET			= $(addprefix $(OBJ_DIR)/, $(OBJS))
 
