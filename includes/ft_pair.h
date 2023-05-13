@@ -26,9 +26,9 @@ typedef struct s_pair
 	void	*value;
 }t_pair;
 
-t_pair	*ft_pair_new(void *first, void *second);
+t_pair	*ft_pair_new(void *key, void *value);
 
-t_pair	*ft_pair_copy(t_pair *pair, void (*copy1)(), void (*copy2)());
+t_pair	*ft_pair_copy(t_pair *pair, void *(*keycpy)(), void *(*valcpy)());
 
 t_pair	*ft_pair_swap(t_pair *pair);
 
