@@ -25,7 +25,7 @@ MK		= --no-print-directory
 
 DEPS			= includes 
 SRCS			= .
-_SUBFOLDERS		= binary_search_tree conversions is linked_list matrix memory pair print str
+_SUBFOLDERS		= binary_search_tree conversions dictionary is linked_list matrix memory pair print str
 VPATH			= srcs $(addprefix $(SRCS)/ft_, $(_SUBFOLDERS))
 OBJ_DIR			= bin
 
@@ -33,31 +33,33 @@ OBJ_DIR			= bin
 
 NAME			= libnc.a
 
-_BINARY_TREE	= bstree_new bstree_insert bstree_traverse bstree_delete bstree_clear \
-					bstree_print bstree_copy bstree_deepcopy bstree_find bstree_count \
-					bstree_height bstree_to_list
-
-_CONVERSIONS 	= atoi itoa tochar tolower tonum toupper
-
 _IS 			= isalnum isalpha isascii isdigit isprint
-
-_LINKED_LISTS	= list_add_back list_add_front list_at list_clear list_delone list_find \
-					list_iter list_last list_map list_new list_reverse list_size
-
-_MATRIX			= matrix_new matrix_delete matrix_size matrix_copy matrix_append \
-					matrix_print
-
-_MEMORY			= bzero calloc memchr memcmp memcpy memmove memset
-
-_PAIR 			= pair_new pair_print pair_copy pair_swap pair_delete pair_tostring
-
-_PRINT			= putchar_fd putendl_fd putnbr_fd putstr_fd
 
 _STR			= replace replace_all split strchr strdup striteri strjoin strlcat \
 					strlcpy strlen strmapi strncmp strnstr strrchr strtrim substr
 
-_FILES			= $(_BINARY_TREE) $(_CONVERSIONS) $(_IS) $(_LINKED_LISTS) $(_MATRIX) \
-					$(_MEMORY) $(_PAIR) $(_PRINT) $(_STR)
+_PRINT			= putchar_fd putendl_fd putnbr_fd putstr_fd
+
+_MEMORY			= bzero calloc memchr memcmp memcpy memmove memset
+
+_CONVERSIONS 	= atoi itoa tochar tolower tonum toupper
+
+_PAIR 			= pair_new pair_print pair_copy pair_swap pair_delete pair_tostring
+
+_MATRIX			= matrix_new matrix_delete matrix_size matrix_copy matrix_append \
+					matrix_print
+
+_DICTIONARY 	= dict_new
+
+_LINKED_LISTS	= list_add_back list_add_front list_at list_clear list_delone list_find \
+					list_iter list_last list_map list_new list_reverse list_size
+
+_BINARY_TREE	= bstree_new bstree_insert bstree_traverse bstree_delete bstree_clear \
+					bstree_print bstree_copy bstree_deepcopy bstree_find bstree_count \
+					bstree_height bstree_to_list
+
+_FILES			= $(_BINARY_TREE) $(_CONVERSIONS) $(_DICTIONARY) $(_IS) $(_LINKED_LISTS) \
+					$(_MATRIX) $(_MEMORY) $(_PAIR) $(_PRINT) $(_STR)
 
 OBJS			= $(_FILES:%=ft_%.o)
 TARGET			= $(addprefix $(OBJ_DIR)/, $(OBJS))

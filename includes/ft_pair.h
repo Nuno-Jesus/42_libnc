@@ -75,7 +75,7 @@ t_pair	*ft_pair_swap(t_pair *pair, void *(*keycpy)(), void *(*valcpy)());
  * @return char* A pointer to the new string
  * @return NULL If allocation fails
  */
-char	*ft_pair_tostring(t_pair *pair, char *(*keystr)(), char *(*valistr)());
+char	*ft_pair_tostring(t_pair *pair, char *(*keystr)(), char *(*valstr)());
 
 /**
  * @brief Frees the given pair using the provided keydel and valdel functions.
@@ -95,6 +95,6 @@ void	ft_pair_delete(t_pair *pair, void (*keydel)(), void (*valdel)());
  * @param keystr The function to convert the key to a string
  * @param valistr The function to convert the value to a string
  */
-void	ft_pair_print(t_pair *pair, char *(*keystr)(), char *(*valistr)());
+void	ft_pair_print(t_pair *pair, char *(*keystr)(), char *(*valstr)());
 
 #endif 
