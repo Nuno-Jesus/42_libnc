@@ -59,7 +59,7 @@ bool	ft_dict_exists(t_dict *dict, void *key);
 
 void	ft_dict_replace(t_dict *dict, void *key, void *value);
 
-void	ft_dict_add(t_dict *dict, void *key, void *value);
+void	ft_dict_insert(t_dict *dict, void *key, void *value);
 
 void	ft_dict_remove(t_dict *dict, void *key);
 

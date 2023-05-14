@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dict_new.c                                      :+:      :+:    :+:   */
+/*   ft_dict_insert.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/14 16:33:02 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/14 16:33:02 by marvin           ###   ########.fr       */
+/*   Created: 2023/05/14 17:07:00 by marvin            #+#    #+#             */
+/*   Updated: 2023/05/14 17:07:00 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libnc.h"
 
-t_dict	*ft_dict_new(int (*keycmp)(), int (*valcmp)(), void	*(*keycpy)(), \
-	void *(*valcpy)())
+void	ft_dict_insert(t_dict *dict, void *key, void *value)
 {
-	t_dict	*dict;
+	t_pair		*pair;
 
-	if (!(*keycmp))
-		return (NULL);
-	dict = ft_calloc(1, sizeof(t_dict));
-	if (!dict)
-		return (NULL);
-	dict->keycmp = keycmp;
-	dict->valcmp = valcmp;
-	dict->keycpy = keycpy;
-	dict->valcpy = valcpy;
-	return (dict);
+	if (!dict || !key)
+		return ;
+	pair = ft_pair_new(key, value);
+	if (!pair)
+		return ;
+	dict->pairs = ft_bstree_insert(dict->pairs, pair, dict->keycmp, 0);
 }
