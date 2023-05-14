@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 18:50:44 by crypto            #+#    #+#             */
-/*   Updated: 2023/05/13 19:07:32 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/14 15:58:03 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,14 @@
 # include "ft_pair.h"
 # include "ft_print.h"
 # include "ft_str.h"
+
+# define MAX(a, b) ((a) > (b) ? (a) : (b))
+# define MIN(a, b) ((a) < (b) ? (a) : (b))
+# define ABS(x) ((x) < 0 ? -(x) : (x))
+
+# define ODD(x) ((x) & 1)
+# define EVEN(x) !ODD(x)
+
+# define BIT(n) (1 << (n))
 
 #endif
