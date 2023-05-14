@@ -16,7 +16,7 @@ void	ft_dict_insert(t_dict *dict, void *key, void *value)
 {
 	t_pair		*pair;
 
-	if (!dict || !key)
+	if (!dict || !key || ft_dict_exists(dict, key))
 		return ;
 	pair = ft_pair_new(key, value);
 	if (!pair)
