@@ -22,6 +22,8 @@
 # include <unistd.h>
 # include <ctype.h>
 
+# include "ft_linked_list.h"
+
 typedef enum e_traversal
 {
 	PREORDER,
@@ -132,5 +134,22 @@ void		ft_bstree_print(t_bstree *tree, void (*print)());
  * @param type The type of traversal to use
  */
 void		ft_bstree_traverse(t_bstree **tree, void (*f)(), t_traversal type);
+
+/**
+ * @brief Counts the number of nodes in a binary search tree
+ * 
+ * @param tree The tree to count
+ * @return uint32_t The number of nodes
+ */
+uint32_t 	ft_bstree_count(t_bstree *tree);
+
+/**
+ * @brief Iterates over the binary search tree and returns the maximum
+ * depth of the tree
+ * 
+ * @param tree The tree to search on
+ * @return uint32_t The maximum depth of the tree
+ */
+uint32_t 	ft_bstree_height(t_bstree *tree);
 
 #endif
