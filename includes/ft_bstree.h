@@ -33,7 +33,7 @@ typedef enum e_traversal
 
 typedef struct s_bstree
 {
-	void			*content;
+	void			*data;
 	uint32_t		depth;
 	struct s_bstree	*left;
 	struct s_bstree	*right;

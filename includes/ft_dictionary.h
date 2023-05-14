@@ -28,29 +28,28 @@
 typedef struct s_dict
 {
 	int			(*keycmp)();
-	int			(*valcmp)();
 	void		*(*keycpy)();
+	int			(*valcmp)();
 	void		*(*valcpy)();
+	void		(*keydel)();
+	void		(*valdel)();
 	uint32_t	size;
 	t_bstree	*pairs;
 }t_dict;
 
 /**
- * @brief Creates a new dictionary struct and initializes it with the given
- * parameters. The keycmp should not be NULL.
+ * @brief Creates a new dictionary struct.
  * 
- * @note The key and val functions are relative to the key and 
- * value of a t_pair struct. In other words, this functions should receive
- * t_pair pointers as parameters.
- * @param keycmp The function used to compare keys.
- * @param valcmp The function used to compare values.
- * @param keycpy The function used to copy keys.
- * @param valcpy The function used to copy values.
  * @return t_dict* A pointer to the new dictionary.
  * @return NULL If the allocation failed.
  */
-t_dict	*ft_dict_new(int (*keycmp)(), int (*valcmp)(), void	*(*keycpy)(), \
-	void *(*valcpy)());
+t_dict	*ft_dict_new();
+
+void	ft_dict_keys_setup(t_dict *dict, int (*cmp)(), void *(*cpy)(), \
+	void (*del)());
+
+void	ft_dict_values_setup(t_dict *dict, int (*cmp)(), void *(*cpy)(), \
+	void (*del)());
 
 /**
  * @brief Duplicates the given dictionary into a new one.
@@ -82,20 +81,16 @@ t_pair	*ft_dict_get(t_dict *dict, void *key);
  */
 bool	ft_dict_exists(t_dict *dict, void *key);
 
-void	ft_dict_replace(t_dict *dict, void *key, void *value);
-
 /**
  * @brief Inserts a new pair into the dictionary. If the key already exists
  * the value will be replaced.
  * @param dict The dictionary to insert into.
  * @param key The key of the pair
  * @param value The value of the pair
- * @param del The function used to delete the value of the pair if the key
- * already exists.
  */
-void	ft_dict_insert(t_dict *dict, void *key, void *value, void (*del)());
+void	ft_dict_insert(t_dict *dict, void *key, void *value);
 
-void	ft_dict_remove(t_dict *dict, void *key);
+void	ft_dict_remove(t_dict *dict, t_pair *pair);
 
 void	ft_dict_merge(t_dict *d1, t_dict *d2);
 

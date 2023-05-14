@@ -12,28 +12,30 @@
 
 #include "libnc.h"
 
-static void	*helper(t_bstree *tree, void *key, int (*cmp)())
+static void	*helper(t_bstree *tree, t_pair *tmp, int (*cmp)())
 {
 	void	*value;
 	t_pair	*pair;
 
 	if (!tree)
 		return (NULL);
-	pair = tree->content;
-	if (!cmp(pair->key, key))
+	pair = tree->data;
+	if (!cmp(pair, tmp))
 		return (pair);
-	value = helper(tree->left, key, cmp);
+	value = helper(tree->left, tmp, cmp);
 	if (!value)
-		value = helper(tree->right, key, cmp);
+		value = helper(tree->right, tmp, cmp);
 	return (value);
 }
 
 t_pair	*ft_dict_get(t_dict *dict, void *key)
 {
 	t_pair	*pair;
+	t_pair	tmp;
 
 	if (!dict || !key)
 		return (NULL);
-	pair = helper(dict->pairs, key, dict->keycmp);
+	tmp.key = key;
+	pair = helper(dict->pairs, &tmp, dict->keycmp);
 	return (pair);
 }

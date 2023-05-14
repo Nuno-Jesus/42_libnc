@@ -12,19 +12,12 @@
 
 #include "libnc.h"
 
-t_dict	*ft_dict_new(int (*keycmp)(), int (*valcmp)(), void	*(*keycpy)(), \
-	void *(*valcpy)())
+t_dict	*ft_dict_new()
 {
 	t_dict	*dict;
 
-	if (!(*keycmp))
-		return (NULL);
 	dict = ft_calloc(1, sizeof(t_dict));
 	if (!dict)
 		return (NULL);
-	dict->keycmp = keycmp;
-	dict->valcmp = valcmp;
-	dict->keycpy = keycpy;
-	dict->valcpy = valcpy;
 	return (dict);
 }

@@ -12,7 +12,7 @@
 
 #include "libnc.h"
 
-void	ft_dict_insert(t_dict *dict, void *key, void *value, void (*del)())
+void	ft_dict_insert(t_dict *dict, void *key, void *value)
 {
 	t_pair		*pair;
 
@@ -21,7 +21,7 @@ void	ft_dict_insert(t_dict *dict, void *key, void *value, void (*del)())
 	if (ft_dict_exists(dict, key))
 	{
 		pair = ft_dict_get(dict, key);
-		del(pair->value);
+		dict->valdel(pair->value);
 		pair->value = value;
 		return ;
 	}

@@ -12,14 +12,14 @@
 
 #include "libnc.h"
 
-t_bstree	*ft_bstree_new(void *content, uint32_t depth)
+t_bstree	*ft_bstree_new(void *data, uint32_t depth)
 {
 	t_bstree	*node;
 
 	node = ft_calloc(1, sizeof(t_bstree));
 	if (!node)
 		return (NULL);
-	node->content = content;
+	node->data = data;
 	node->depth = depth;
 	return (node);
 }

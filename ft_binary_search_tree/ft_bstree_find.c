@@ -18,7 +18,7 @@ t_bstree	*ft_bstree_find(t_bstree *tree, void *data, int (*cmp)())
 
 	if (!tree)
 		return (NULL);
-	if (!(*cmp)(tree->content, data))
+	if (!(*cmp)(tree->data, data))
 		return (tree);
 	node = ft_bstree_find(tree->left, data, cmp);
 	if (!node)

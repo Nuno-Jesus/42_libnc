@@ -15,12 +15,12 @@
 t_bstree	*ft_bstree_copy(t_bstree *node, void *(*copy)())
 {
 	t_bstree	*dup;
-	void		*content;
+	void		*data;
 
-	content = node->content;
+	data = node->data;
 	if (copy)
-		content = copy(node->content);
-	dup = ft_bstree_new(content, node->depth);
+		data = copy(node->data);
+	dup = ft_bstree_new(data, node->depth);
 	if (!dup)
 		return (NULL);
 	return (dup);

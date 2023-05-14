@@ -17,6 +17,6 @@ void	ft_bstree_delete(t_bstree *node, void (*del)())
 	if (!node)
 		return ;
 	if (*del)
-		(*del)(node->content);
+		(*del)(node->data);
 	free(node);
 }

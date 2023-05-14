@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bstree_to_list.c                                :+:      :+:    :+:   */
+/*   ft_dict_values_setup.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/14 12:12:55 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/14 12:12:55 by marvin           ###   ########.fr       */
+/*   Created: 2023/05/14 20:21:12 by marvin            #+#    #+#             */
+/*   Updated: 2023/05/14 20:21:12 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libnc.h"
+# include "libnc.h"
 
-t_list	*ft_bstree_to_list(t_bstree *tree, void *(*copy)())
+void	ft_dict_values_setup(t_dict *dict, int (*cmp)(), void *(*cpy)(), \
+	void (*del)())
 {
-	t_list	*left;
-	t_list	*right;
-
-	left = NULL;
-	if (!tree)
-		return (NULL);
-	left = ft_bstree_to_list(tree->left, copy);
-	ft_list_add_back(&left, ft_list_new(copy(tree->data)));
-	right = ft_bstree_to_list(tree->right, copy);
-	ft_list_add_back(&left, right);
-	return (left);
+	dict->valcmp = cmp;
+	dict->valcpy = cpy;
+	dict->valdel = del;
 }

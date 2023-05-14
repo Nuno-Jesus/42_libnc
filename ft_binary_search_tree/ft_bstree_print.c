@@ -23,7 +23,7 @@ static void	helper(t_bstree *node, void (*print)())
 		ft_putstr_fd("├── ", STDOUT_FILENO);
 	else
 		ft_putstr_fd("└── ", STDOUT_FILENO);
-	print(node->content);
+	print(node->data);
 }
 
 void	ft_bstree_print(t_bstree *tree, void (*print)())

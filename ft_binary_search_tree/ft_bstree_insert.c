@@ -17,7 +17,7 @@ t_bstree	*ft_bstree_insert(t_bstree *tree, void *data, int (*cmp)(), \
 {
 	if (!tree)
 		return (ft_bstree_new(data, depth));
-	else if (cmp(data, tree->content) < 0)
+	else if (cmp(data, tree->data) < 0)
 		tree->left = ft_bstree_insert(tree->left, data, cmp, depth + 1);
 	else
 		tree->right = ft_bstree_insert(tree->right, data, cmp, depth + 1);
