@@ -141,7 +141,7 @@ void		ft_bstree_traverse(t_bstree **tree, void (*f)(), t_traversal type);
  * @param tree The tree to count
  * @return uint32_t The number of nodes
  */
-uint32_t 	ft_bstree_count(t_bstree *tree);
+uint32_t	ft_bstree_count(t_bstree *tree);
 
 /**
  * @brief Iterates over the binary search tree and returns the maximum
@@ -150,7 +150,7 @@ uint32_t 	ft_bstree_count(t_bstree *tree);
  * @param tree The tree to search on
  * @return uint32_t The maximum depth of the tree
  */
-uint32_t 	ft_bstree_height(t_bstree *tree);
+uint32_t	ft_bstree_height(t_bstree *tree);
 
 /**
  * @brief Flattens the binary search tree into a linked list. The left nodes

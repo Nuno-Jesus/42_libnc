@@ -12,7 +12,7 @@
 
 #include "libnc.h"
 
-t_list		*ft_bstree_to_list(t_bstree *tree, void *(*copy)())
+t_list	*ft_bstree_to_list(t_bstree *tree, void *(*copy)())
 {
 	t_list	*left;
 	t_list	*right;
@@ -26,4 +26,3 @@ t_list		*ft_bstree_to_list(t_bstree *tree, void *(*copy)())
 	ft_list_add_back(&left, right);
 	return (left);
 }
-

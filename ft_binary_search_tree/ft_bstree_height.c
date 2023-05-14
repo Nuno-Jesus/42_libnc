@@ -19,7 +19,7 @@ static int	ft_max(int a, int b)
 	return (b);
 }
 
-uint32_t 	ft_bstree_height(t_bstree *tree)
+uint32_t	ft_bstree_height(t_bstree *tree)
 {
 	uint32_t	left_height;
 	uint32_t	right_height;
