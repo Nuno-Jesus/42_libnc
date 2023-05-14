@@ -37,10 +37,11 @@ typedef struct s_dict
 
 /**
  * @brief Creates a new dictionary struct and initializes it with the given
- * parameters.
+ * parameters. The keycmp should not be NULL.
  * 
- * @note The keycpy and valcpy can be NULL. If so, when copying a dictionary
- * the values and keys will be assigned directly.
+ * @note The key and val functions are relative to the key and 
+ * value of a t_pair struct. In other words, this functions should receive
+ * t_pair pointers as parameters.
  * @param keycmp The function used to compare keys.
  * @param valcmp The function used to compare values.
  * @param keycpy The function used to copy keys.
@@ -51,6 +52,13 @@ typedef struct s_dict
 t_dict	*ft_dict_new(int (*keycmp)(), int (*valcmp)(), void	*(*keycpy)(), \
 	void *(*valcpy)());
 
+/**
+ * @brief Duplicates the given dictionary into a new one.
+ * 
+ * @param dict The dictionary to duplicate
+ * @return t_dict* The new dictionary
+ * @return NULL If the allocation failed
+ */
 t_dict	*ft_dict_copy(t_dict *dict);
 
 void	*ft_dict_get(t_dict *dict, void *key);
@@ -59,6 +67,13 @@ bool	ft_dict_exists(t_dict *dict, void *key);
 
 void	ft_dict_replace(t_dict *dict, void *key, void *value);
 
+/**
+ * @brief Inserts a new pair into the dictionary. If the key already exists
+ * the value will be replaced.
+ * @param dict The dictionary to insert into.
+ * @param key The key of the pair
+ * @param value The value of the pair
+ */
 void	ft_dict_insert(t_dict *dict, void *key, void *value);
 
 void	ft_dict_remove(t_dict *dict, void *key);

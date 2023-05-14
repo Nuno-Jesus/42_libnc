@@ -22,4 +22,5 @@ void	ft_dict_insert(t_dict *dict, void *key, void *value)
 	if (!pair)
 		return ;
 	dict->pairs = ft_bstree_insert(dict->pairs, pair, dict->keycmp, 0);
+	dict->size++;
 }
