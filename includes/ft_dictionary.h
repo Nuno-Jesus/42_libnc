@@ -61,8 +61,24 @@ t_dict	*ft_dict_new(int (*keycmp)(), int (*valcmp)(), void	*(*keycpy)(), \
  */
 t_dict	*ft_dict_copy(t_dict *dict);
 
+/**
+ * @brief Returns the value associated with the given key.
+ * 
+ * @param dict The dict to search on
+ * @param key The key to search for
+ * @return void* The mapped value of the key
+ * @return NULL If the key does not exist
+ */
 void	*ft_dict_get(t_dict *dict, void *key);
 
+/**
+ * @brief Returns true if the given key exists in the dictionary.
+ * 
+ * @param dict The dictionary to search on
+ * @param key The key to search for
+ * @return true If the key exists
+ * @return false Otherwise
+ */
 bool	ft_dict_exists(t_dict *dict, void *key);
 
 void	ft_dict_replace(t_dict *dict, void *key, void *value);

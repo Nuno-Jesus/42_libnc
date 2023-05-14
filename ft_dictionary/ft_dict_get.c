@@ -18,7 +18,7 @@ static void	*helper(t_bstree *tree, void *key, int (*cmp)())
 	t_pair	*pair;
 
 	if (!tree)
-		return (0);
+		return (NULL);
 	pair = tree->content;
 	if (!cmp(pair->key, key))
 		return (pair->value);
