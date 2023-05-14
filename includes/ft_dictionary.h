@@ -62,14 +62,15 @@ t_dict	*ft_dict_new(int (*keycmp)(), int (*valcmp)(), void	*(*keycpy)(), \
 t_dict	*ft_dict_copy(t_dict *dict);
 
 /**
- * @brief Returns the value associated with the given key.
+ * @brief Returns a t_pair pointer to a pair if the given key exists in the
+ * dictionary.
  * 
  * @param dict The dict to search on
  * @param key The key to search for
- * @return void* The mapped value of the key
+ * @return t_pair* The key and the matching value
  * @return NULL If the key does not exist
  */
-void	*ft_dict_get(t_dict *dict, void *key);
+t_pair	*ft_dict_get(t_dict *dict, void *key);
 
 /**
  * @brief Returns true if the given key exists in the dictionary.
@@ -89,8 +90,10 @@ void	ft_dict_replace(t_dict *dict, void *key, void *value);
  * @param dict The dictionary to insert into.
  * @param key The key of the pair
  * @param value The value of the pair
+ * @param del The function used to delete the value of the pair if the key
+ * already exists.
  */
-void	ft_dict_insert(t_dict *dict, void *key, void *value);
+void	ft_dict_insert(t_dict *dict, void *key, void *value, void (*del)());
 
 void	ft_dict_remove(t_dict *dict, void *key);
 

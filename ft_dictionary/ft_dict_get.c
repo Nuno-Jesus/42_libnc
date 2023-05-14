@@ -21,19 +21,19 @@ static void	*helper(t_bstree *tree, void *key, int (*cmp)())
 		return (NULL);
 	pair = tree->content;
 	if (!cmp(pair->key, key))
-		return (pair->value);
+		return (pair);
 	value = helper(tree->left, key, cmp);
 	if (!value)
 		value = helper(tree->right, key, cmp);
 	return (value);
 }
 
-void	*ft_dict_get(t_dict *dict, void *key)
+t_pair	*ft_dict_get(t_dict *dict, void *key)
 {
-	void	*value;
+	t_pair	*pair;
 
 	if (!dict || !key)
 		return (NULL);
-	value = helper(dict->pairs, key, dict->keycmp);
-	return (value);
+	pair = helper(dict->pairs, key, dict->keycmp);
+	return (pair);
 }

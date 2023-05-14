@@ -12,12 +12,19 @@
 
 #include "libnc.h"
 
-void	ft_dict_insert(t_dict *dict, void *key, void *value)
+void	ft_dict_insert(t_dict *dict, void *key, void *value, void (*del)())
 {
 	t_pair		*pair;
 
-	if (!dict || !key || ft_dict_exists(dict, key))
+	if (!dict || !key)
 		return ;
+	if (ft_dict_exists(dict, key))
+	{
+		pair = ft_dict_get(dict, key);
+		del(pair->value);
+		pair->value = value;
+		return ;
+	}
 	pair = ft_pair_new(key, value);
 	if (!pair)
 		return ;
