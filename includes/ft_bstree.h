@@ -152,4 +152,14 @@ uint32_t 	ft_bstree_count(t_bstree *tree);
  */
 uint32_t 	ft_bstree_height(t_bstree *tree);
 
+/**
+ * @brief Flattens the binary search tree into a linked list. The left nodes
+ * are placed before the right nodes, which means that the list will be sorted.
+ * 
+ * @param tree The tree to flatten
+ * @return t_list* The new sorted list
+ * @return NULL If the allocation fails
+ */
+t_list		*ft_bstree_to_list(t_bstree *tree, void *(*copy)());
+
 #endif
