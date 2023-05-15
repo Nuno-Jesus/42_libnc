@@ -28,11 +28,13 @@
 typedef struct s_dict
 {
 	int			(*keycmp)();
+	void		(*keydel)();
+	char		*(*keystr)();
 	void		*(*keycpy)();
 	int			(*valcmp)();
-	void		*(*valcpy)();
-	void		(*keydel)();
 	void		(*valdel)();
+	char		*(*valstr)();
+	void		*(*valcpy)();
 	uint32_t	size;
 	t_bstree	*pairs;
 }t_dict;
@@ -114,15 +116,46 @@ void	ft_dict_remove(t_dict *dict, void *key);
  */
 t_list	*ft_dict_to_list(t_dict *dict);
 
-void	**ft_dict_keys(t_dict *dict);
+/**
+ * @brief Returns a list of the keys of the dictionary.
+ * 
+ * @param dict The dictionary to transform
+ * @return t_list* The list of keys
+ * @return NULL If the allocation failed or if the dictionary is empty
+ */
+t_list	*ft_dict_keys(t_dict *dict);
 
-void	**ft_dict_values(t_dict *dict);
+/**
+ * @brief Returns a list of the values of the dictionary.
+ * 
+ * @param dict The dictionary to transform
+ * @return t_list* The list of values
+ * @return NULL If the allocation failed or if the dictionary is empty
+ */
+t_list	*ft_dict_values(t_dict *dict);
 
+/**
+ * @brief Clears all the pairs from the dictionary, reseting its size to 0.
+ * 
+ * @param dict The dictionary to clear
+ */
 void	ft_dict_clear(t_dict *dict);
 
+/**
+ * @brief Deletes the dictionary and all its pairs.
+ * 
+ * @param dict The dictionary to delete
+ */
 void	ft_dict_delete(t_dict *dict);
 
-void	ft_dict_print(t_dict *dict, void *(*keystr)(), void *(*valstr)());
+/**
+ * @brief Prints the dictionary to stdout.
+ * 
+ * @param dict The dictionary to print
+ * @param keystr The function to print the keys
+ * @param valstr The function to print the values
+ */
+void	ft_dict_print(t_dict *dict);
 
 // void	ft_dict_merge(t_dict *d1, t_dict *d2);
 #endif
