@@ -12,7 +12,7 @@
 
 #include "libnc.h"
 
-static void	helper(t_bstree *node, void (*print)())
+static void	display(t_bstree *node, void (*print)())
 {
 	uint32_t	i;
 
@@ -26,11 +26,19 @@ static void	helper(t_bstree *node, void (*print)())
 	print(node->data);
 }
 
-void	ft_bstree_print(t_bstree *tree, void (*print)())
+static void	helper(t_bstree* tree, void (*print)(), uint32_t depth)
 {
 	if (!tree)
 		return ;
-	helper(tree, print);
-	ft_bstree_print(tree->right, print);
-	ft_bstree_print(tree->left, print);
+	tree->depth = depth;
+	display(tree, print);
+	helper(tree->right, print, depth + 1);
+	helper(tree->left, print, depth + 1);
+}
+
+void	ft_bstree_print(t_bstree *tree, void (*print)())
+{
+	if (!tree || !print)
+		return ;
+	helper(tree, print, 0);
 }

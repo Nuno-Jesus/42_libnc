@@ -29,11 +29,6 @@ static t_bstree	*find_best(t_bstree *tree)
 	return (curr);
 }
 
-void	dp(t_pair *pair)
-{
-	printf("%s=%s\n", (char *)pair->key, (char *)pair->value);
-}
-
 static t_bstree	*helper(t_bstree **tree, t_pair *pair, t_dict *dict)
 {
 	t_bstree	*node;

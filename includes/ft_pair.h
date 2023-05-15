@@ -89,6 +89,15 @@ char	*ft_pair_tostring(t_pair *pair, char *(*keystr)(), char *(*valstr)());
 void	ft_pair_delete(t_pair *pair, void (*keydel)(), void (*valdel)());
 
 /**
+ * @brief Clears the key and values of a pair, without freeing the pair itself
+ * 
+ * @param pair The pair to clear
+ * @param keydel The function to delete the key
+ * @param valdel The function to delete the value
+ */
+void	ft_pair_clear(t_pair *pair, void (*keydel)(), void (*valdel)());
+
+/**
  * @brief Prints the given pair using the provided keystr and valistr functions.
  * 
  * @param pair The pair to print

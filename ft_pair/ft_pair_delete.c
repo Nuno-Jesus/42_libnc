@@ -16,9 +16,6 @@ void	ft_pair_delete(t_pair *pair, void (*keydel)(), void (*valdel)())
 {
 	if (!pair)
 		return ;
-	if (keydel && pair->key)
-		keydel(pair->key);
-	if (valdel && pair->value)
-		valdel(pair->value);
+	ft_pair_clear(pair, keydel, valdel);
 	free(pair);
 }

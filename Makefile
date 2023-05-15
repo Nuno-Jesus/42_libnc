@@ -44,7 +44,8 @@ _MEMORY			= bzero calloc memchr memcmp memcpy memmove memset
 
 _CONVERSIONS 	= atoi itoa tochar tolower tonum toupper
 
-_PAIR 			= pair_new pair_print pair_copy pair_swap pair_delete pair_tostring
+_PAIR 			= pair_new pair_print pair_copy pair_swap pair_delete pair_tostring \
+					pair_clear
 
 _MATRIX			= matrix_new matrix_delete matrix_size matrix_copy matrix_append \
 					matrix_print

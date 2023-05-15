@@ -21,8 +21,9 @@ void	ft_dict_insert(t_dict *dict, void *key, void *value)
 	if (ft_dict_exists(dict, key))
 	{
 		pair = ft_dict_get(dict, key);
-		dict->valdel(pair->value);
-		pair->value = value;
+		ft_pair_print(pair, ft_strdup, ft_strdup);
+		ft_pair_clear(pair, dict->keydel, dict->valdel);
+		*pair = (t_pair){.key=key, .value=value};
 		return ;
 	}
 	pair = ft_pair_new(key, value);
