@@ -97,7 +97,13 @@ bool	ft_dict_exists(t_dict *dict, void *key);
  */
 void	ft_dict_insert(t_dict *dict, void *key, void *value);
 
-void	ft_dict_remove(t_dict *dict, t_pair *pair);
+/**
+ * @brief Removes the pair with the given key from the dictionary. 
+ * 
+ * @param dict The dictionary to remove from
+ * @param key The key of the pair to remove
+ */
+void	ft_dict_remove(t_dict *dict, void *key);
 
 void	ft_dict_merge(t_dict *d1, t_dict *d2);
 

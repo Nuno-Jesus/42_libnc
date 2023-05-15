@@ -56,9 +56,12 @@ static t_bstree	*helper(t_bstree **tree, t_pair *pair, t_dict *dict)
 	return (*tree);
 }
 
-void	ft_dict_remove(t_dict *dict, t_pair *pair)
+void	ft_dict_remove(t_dict *dict, void *key)
 {
-	if (!dict || !pair || !pair->key || !dict->pairs)
+	t_pair	tmp;
+
+	if (!key || !dict || !dict->pairs)
 		return ;
-	dict->pairs = helper(&dict->pairs, pair, dict);
+	tmp.key = key;
+	dict->pairs = helper(&dict->pairs, &tmp, dict);
 }
