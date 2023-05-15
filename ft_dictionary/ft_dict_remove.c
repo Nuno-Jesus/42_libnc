@@ -39,6 +39,7 @@ static t_bstree	*helper(t_bstree **tree, t_pair *pair, t_dict *dict)
 		(*tree)->right = helper(&(*tree)->right, pair, dict);
 	else
 	{
+		dict->size--;
 		if (!(*tree)->left)
 			node = (*tree)->right;
 		else if (!(*tree)->right)

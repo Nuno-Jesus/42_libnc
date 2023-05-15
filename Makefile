@@ -51,7 +51,7 @@ _MATRIX			= matrix_new matrix_delete matrix_size matrix_copy matrix_append \
 					matrix_print
 
 _DICTIONARY 	= dict_new dict_insert dict_copy dict_get dict_exists dict_remove \
-					dict_values_setup dict_keys_setup dict_clear dict_delete
+					dict_values_setup dict_keys_setup dict_clear dict_delete dict_to_list
 
 _LINKED_LISTS	= list_add_back list_add_front list_at list_clear list_delone list_find \
 					list_iter list_last list_map list_new list_reverse list_size

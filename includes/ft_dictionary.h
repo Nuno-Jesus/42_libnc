@@ -105,9 +105,14 @@ void	ft_dict_insert(t_dict *dict, void *key, void *value);
  */
 void	ft_dict_remove(t_dict *dict, void *key);
 
-void	ft_dict_merge(t_dict *d1, t_dict *d2);
-
-t_pair	*ft_dict_to_array(t_dict *dict);
+/**
+ * @brief Shapes the dictionary into a list of t_pair pointers.
+ * 
+ * @param dict The dictionary to transform
+ * @return t_list* The list of t_pair pointers
+ * @return NULL If the allocation failed or if the dictionary is empty
+ */
+t_list	*ft_dict_to_list(t_dict *dict);
 
 void	**ft_dict_keys(t_dict *dict);
 
@@ -119,6 +124,5 @@ void	ft_dict_delete(t_dict *dict);
 
 void	ft_dict_print(t_dict *dict, void *(*keystr)(), void *(*valstr)());
 
-void	ft_dict_map(t_dict *dict, void *(*keymap)(), void *(*valmap)());
-
+// void	ft_dict_merge(t_dict *d1, t_dict *d2);
 #endif
