@@ -38,16 +38,23 @@ typedef struct s_dict
 }t_dict;
 
 /**
- * @brief Creates a new dictionary struct.
+ * @brief Creates a new dictionary struct. This function should be immediately
+ * followed by a call to ft_dict_keys_setup and ft_dict_values_setup.
  * 
  * @return t_dict* A pointer to the new dictionary.
  * @return NULL If the allocation failed.
  */
 t_dict	*ft_dict_new();
 
+/**
+ * @brief Setups the dictionary with function to treat keys.
+ */
 void	ft_dict_keys_setup(t_dict *dict, int (*cmp)(), void *(*cpy)(), \
 	void (*del)());
 
+/**
+ * @brief Setups the dictionary with function to treat values.
+ */
 void	ft_dict_values_setup(t_dict *dict, int (*cmp)(), void *(*cpy)(), \
 	void (*del)());
 

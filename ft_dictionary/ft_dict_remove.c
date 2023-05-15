@@ -60,5 +60,5 @@ void	ft_dict_remove(t_dict *dict, t_pair *pair)
 {
 	if (!dict || !pair || !pair->key || !dict->pairs)
 		return ;
-	helper(&dict->pairs, pair, dict);
+	dict->pairs = helper(&dict->pairs, pair, dict);
 }
