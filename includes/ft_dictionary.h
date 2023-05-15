@@ -31,7 +31,6 @@ typedef struct s_dict
 	void		(*keydel)();
 	char		*(*keystr)();
 	void		*(*keycpy)();
-	int			(*valcmp)();
 	void		(*valdel)();
 	char		*(*valstr)();
 	void		*(*valcpy)();
@@ -41,24 +40,19 @@ typedef struct s_dict
 
 /**
  * @brief Creates a new dictionary struct. This function should be immediately
- * followed by a call to ft_dict_keys_setup and ft_dict_values_setup.
+ * followed by a call to ft_dict_values_setup.
  * 
  * @return t_dict* A pointer to the new dictionary.
  * @return NULL If the allocation failed.
  */
-t_dict	*ft_dict_new();
-
-/**
- * @brief Setups the dictionary with function to treat keys.
- */
-void	ft_dict_keys_setup(t_dict *dict, int (*cmp)(), void *(*cpy)(), \
-	void (*del)());
+t_dict	*ft_dict_new(int (*keycmp)(), void *(*keycpy)(), void (*keydel)(), \
+	char *(*keystr)());
 
 /**
  * @brief Setups the dictionary with function to treat values.
  */
-void	ft_dict_values_setup(t_dict *dict, int (*cmp)(), void *(*cpy)(), \
-	void (*del)());
+void	ft_dict_values_setup(t_dict *dict, void *(*valcpy)(), void (*valdel)(), \
+	char *(*valstr)());
 
 /**
  * @brief Duplicates the given dictionary into a new one.

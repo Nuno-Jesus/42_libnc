@@ -12,12 +12,17 @@
 
 #include "libnc.h"
 
-t_dict	*ft_dict_new()
+t_dict	*ft_dict_new(int (*cmp)(), void *(*cpy)(), void (*del)(), \
+	char *(*str)())
 {
 	t_dict	*dict;
 
 	dict = ft_calloc(1, sizeof(t_dict));
 	if (!dict)
 		return (NULL);
+	dict->keycmp = cmp;
+	dict->keycpy = cpy;
+	dict->keydel = del;
+	dict->keystr = str;
 	return (dict);
 }

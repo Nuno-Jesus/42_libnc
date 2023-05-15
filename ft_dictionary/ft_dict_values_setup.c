@@ -12,10 +12,10 @@
 
 # include "libnc.h"
 
-void	ft_dict_values_setup(t_dict *dict, int (*cmp)(), void *(*cpy)(), \
-	void (*del)())
+void	ft_dict_values_setup(t_dict *dict, void *(*valcpy)(), void (*valdel)(), \
+	char *(*valstr)())
 {
-	dict->valcmp = cmp;
-	dict->valcpy = cpy;
-	dict->valdel = del;
+	dict->valcpy = valcpy;
+	dict->valdel = valdel;
+	dict->valstr = valstr;
 }
