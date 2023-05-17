@@ -22,6 +22,16 @@
 # include <unistd.h>
 # include <ctype.h>
 
+/**
+ * @brief A struct that mimics the std::vector from C++
+ * 
+ * @param cmp The function to compare the elements of the vector
+ * @param del The function to delete an element of the vector
+ * @param cpy The function to copy an element of the vector
+ * @param print The function to print an element of the vector
+ * @param size The size of the vector
+ * @param array The array of elements
+ */
 typedef struct s_vector
 {
 	uint32_t	size;

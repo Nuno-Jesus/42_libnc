@@ -25,6 +25,22 @@
 # include "ft_bstree.h"
 # include "ft_pair.h"
 
+/**
+ * @brief A mimic of the python dictionaries. This struct is a wrapper 
+ * around a Binary Search Tree . It is used to store key-value pairs. 
+ * 
+ * @param keycmp A function pointer to a function that compares two keys.
+ * @param keydel A function pointer to a function that deletes a key.
+ * @param keystr A function pointer to a function that returns a string
+ * representation of a key.
+ * @param keycpy A function pointer to a function that duplicates a key.
+ * @param valdel A function pointer to a function that deletes a value.
+ * @param valstr A function pointer to a function that returns a string
+ * representation of a value.
+ * @param valcpy A function pointer to a function that duplicates a value.
+ * @param size The number of pairs in the dictionary.
+ * @param pairs The binary search tree that stores the pairs.
+ */
 typedef struct s_dict
 {
 	int			(*keycmp)();

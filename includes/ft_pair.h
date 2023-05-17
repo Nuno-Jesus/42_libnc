@@ -20,6 +20,12 @@
 # include <unistd.h>
 # include <ctype.h>
 
+/**
+ * @brief A struct that holds a key and a value
+ * 
+ * @param key The key of the pair
+ * @param value The value of the pair
+ */
 typedef struct s_pair
 {
 	void	*key;

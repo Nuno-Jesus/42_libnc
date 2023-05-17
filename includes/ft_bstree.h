@@ -31,6 +31,14 @@ typedef enum e_traversal
 	POSTORDER
 }t_traversal;
 
+/**
+ * @brief A binary search tree node
+ * 
+ * @param data The content of the node
+ * @param depth The depth of the node
+ * @param left The left child of the node
+ * @param right The right child of the node
+ */
 typedef struct s_bstree
 {
 	void			*data;
