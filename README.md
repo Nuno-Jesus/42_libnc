@@ -1,5 +1,4 @@
-# **Libft**
-This project was graded <strong>125/100</strong>.
+# **Libnc**
 
 
 ## 📒 **About**
