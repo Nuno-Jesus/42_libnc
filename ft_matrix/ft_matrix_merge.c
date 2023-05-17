@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_matrix_new.c                                    :+:      :+:    :+:   */
+/*   ft_matrix_merge.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 22:45:10 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/12 22:45:10 by marvin           ###   ########.fr       */
+/*   Created: 2023/05/17 20:56:29 by marvin            #+#    #+#             */
+/*   Updated: 2023/05/17 20:56:29 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libnc.h"
 
-void	**ft_matrix_new(size_t lines, size_t columns)
+void	**ft_matrix_merge(void **m1, void **m2, void *(*copy)())
 {
-	void	**matrix;
-	size_t	i;
+	void		**matrix;
+	uint32_t	firstSize;
+	uint32_t	secondSize;
+	uint32_t	i;
 
+	firstSize = ft_matrix_size(m1);
+	secondSize = ft_matrix_size(m2);
+	matrix = ft_matrix_new(firstSize + secondSize, 0);
+	if (!matrix)
+		return (NULL);
 	i = -1;
-	matrix = ft_calloc(lines + 1, sizeof(char *));
-	if (!matrix || !columns)
-		return (matrix);
-	while (++i < lines)
-		matrix[i] = ft_calloc(columns + 1, sizeof(char));
+	while (++i < firstSize)
+		matrix[i] = (*copy)(m1[i]);
+	i = -1;
+	while (++i < secondSize)
+		matrix[i + firstSize] = (*copy)(m2[i]);
 	return (matrix);
 }

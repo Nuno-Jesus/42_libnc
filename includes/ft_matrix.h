@@ -29,7 +29,7 @@
  * @return char** A pointer to the new matrix.
  * @return NULL If the allocation fails.
  */
-char	**ft_matrix_new(size_t lines, size_t columns);
+void	**ft_matrix_new(size_t lines, size_t columns);
 
 /**
  * @brief Creates a duplicate of an existing matrix, using the copy function
@@ -78,5 +78,18 @@ void	ft_matrix_delete(void *matrix, void (*del)());
  * @param print The function containing the logic to print the inner data.
  */
 void	ft_matrix_print(void *matrix, void (*print)());
+
+/**
+ * @brief Merges two matrices using the copy function to copy the inner 
+ * positions.
+ * 
+ * @warning The two matrices must be of the same type!
+ * @param m1 The first matrix
+ * @param m2 The second matrix
+ * @param copy The function to copy the elements of each matrix
+ * @return A new allocated matrix with the elements of both
+ * 
+ */
+void	**ft_matrix_merge(void **m1, void **m2, void *(*copy)());
 
 #endif

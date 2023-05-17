@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_matrix_new.c                                    :+:      :+:    :+:   */
+/*   ft_vector_merge.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 22:45:10 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/12 22:45:10 by marvin           ###   ########.fr       */
+/*   Created: 2023/05/17 20:53:38 by marvin            #+#    #+#             */
+/*   Updated: 2023/05/17 20:53:38 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libnc.h"
 
-void	**ft_matrix_new(size_t lines, size_t columns)
+t_vector	*ft_vector_merge(t_vector *v1, t_vector *v2)
 {
-	void	**matrix;
-	size_t	i;
+	t_vector	*vector;
 
-	i = -1;
-	matrix = ft_calloc(lines + 1, sizeof(char *));
-	if (!matrix || !columns)
-		return (matrix);
-	while (++i < lines)
-		matrix[i] = ft_calloc(columns + 1, sizeof(char));
-	return (matrix);
+	if (v1->cpy != v2->cpy || v1->cmp != v2->cmp || v1->del != v2->del)
+		return (NULL);
+	vector = ft_vector_new(v1->cpy, v1->cmp, v1->del, v1->print);
+	if (!vector)
+		return (NULL);
+	ft_matrix_delete(vector->array, vector->del);
+	vector->array = ft_matrix_merge(v1->array, v2->array, vector->cpy);
+	vector->size = v1->size + v2->size;
+	return (vector);
 }
