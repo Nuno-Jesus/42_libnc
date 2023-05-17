@@ -18,7 +18,6 @@ void	ft_vector_push(t_vector *vector, void *element)
 
 	if (!vector)
 		return ;
-
 	matrix = ft_matrix_append(vector->array, element, vector->cpy);
 	ft_matrix_delete(vector->array, vector->del);
 	vector->array = matrix;

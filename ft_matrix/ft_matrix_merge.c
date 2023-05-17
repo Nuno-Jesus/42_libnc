@@ -15,20 +15,20 @@
 void	**ft_matrix_merge(void **m1, void **m2, void *(*copy)())
 {
 	void		**matrix;
-	uint32_t	firstSize;
-	uint32_t	secondSize;
+	uint32_t	first;
+	uint32_t	second;
 	uint32_t	i;
 
-	firstSize = ft_matrix_size(m1);
-	secondSize = ft_matrix_size(m2);
-	matrix = ft_matrix_new(firstSize + secondSize, 0);
+	first = ft_matrix_size(m1);
+	second = ft_matrix_size(m2);
+	matrix = ft_matrix_new(first + second, 0);
 	if (!matrix)
 		return (NULL);
 	i = -1;
-	while (++i < firstSize)
+	while (++i < first)
 		matrix[i] = (*copy)(m1[i]);
 	i = -1;
-	while (++i < secondSize)
-		matrix[i + firstSize] = (*copy)(m2[i]);
+	while (++i < second)
+		matrix[i + first] = (*copy)(m2[i]);
 	return (matrix);
 }

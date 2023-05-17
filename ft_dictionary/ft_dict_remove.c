@@ -32,7 +32,7 @@ static t_bstree	*find_best(t_bstree *tree)
 static t_bstree	*helper(t_bstree **tree, t_pair *pair, t_dict *dict)
 {
 	t_bstree	*node;
-	
+
 	if (dict->keycmp(pair, (*tree)->data) < 0)
 		(*tree)->left = helper(&(*tree)->left, pair, dict);
 	else if (dict->keycmp(pair, (*tree)->data) > 0)

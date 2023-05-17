@@ -26,7 +26,7 @@ static void	display(t_bstree *node, void (*print)())
 	print(node->data);
 }
 
-static void	helper(t_bstree* tree, void (*print)(), uint32_t depth)
+static void	helper(t_bstree *tree, void (*print)(), uint32_t depth)
 {
 	if (!tree)
 		return ;

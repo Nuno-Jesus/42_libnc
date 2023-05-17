@@ -14,9 +14,9 @@
 
 static void	helper(t_bstree *tree, t_dict *dict)
 {
-	t_pair *pair;
-	char 	*key;
-	char 	*value;
+	t_pair	*pair;
+	char	*key;
+	char	*value;
 
 	if (!tree)
 		return ;
@@ -34,7 +34,7 @@ static void	helper(t_bstree *tree, t_dict *dict)
 
 void	ft_dict_print(t_dict *dict)
 {
-	if (!dict || !dict->pairs || !dict->keystr|| !dict->valstr)
+	if (!dict || !dict->pairs || !dict->keystr || !dict->valstr)
 		return ;
 	helper(dict->pairs, dict);
 }

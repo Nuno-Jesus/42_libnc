@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libnc.h"
+#include "libnc.h"
 
 void	ft_dict_values_setup(t_dict *dict, void *(*valcpy)(), void (*valdel)(), \
 	char *(*valstr)())
