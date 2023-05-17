@@ -41,7 +41,7 @@ void		ft_vector_pop(t_vector *vector);
 
 t_vector	*ft_vector_copy(t_vector *vector);
 
-void		*ft_vector_find(t_vector *vector);
+void		*ft_vector_find(t_vector *vector, void *element);
 
 void		ft_vector_clear(t_vector *vector);
 

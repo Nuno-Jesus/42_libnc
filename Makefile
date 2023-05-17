@@ -52,7 +52,7 @@ _MATRIX			= matrix_new matrix_delete matrix_size matrix_copy matrix_append \
 					matrix_print
 
 _VECTOR			= vector_new vector_push vector_pop vector_clear vector_delete \
-					vector_copy vector_at
+					vector_copy vector_at vector_find
 
 _DICTIONARY 	= dict_new dict_insert dict_copy dict_get dict_exists dict_remove \
 					dict_values_setup dict_keys_setup dict_clear dict_delete dict_to_list \
