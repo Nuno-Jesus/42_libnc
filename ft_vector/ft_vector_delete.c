@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_vector_push.c                                   :+:      :+:    :+:   */
+/*   ft_vector_delete.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 20:07:59 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/17 20:07:59 by marvin           ###   ########.fr       */
+/*   Created: 2023/05/17 20:32:21 by marvin            #+#    #+#             */
+/*   Updated: 2023/05/17 20:32:21 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libnc.h"
 
-void	ft_vector_push(t_vector *vector, void *element)
+void	ft_vector_delete(t_vector *vector)
 {
-	void	**matrix;
-
 	if (!vector)
 		return ;
-
-	matrix = ft_matrix_append(vector->array, element, vector->cpy);
+	ft_vector_clear(vector);
 	ft_matrix_delete(vector->array, vector->del);
-	vector->array = matrix;
-	vector->size++;
+	free(vector);
 }
