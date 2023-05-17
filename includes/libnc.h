@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 18:50:44 by crypto            #+#    #+#             */
-/*   Updated: 2023/05/14 16:34:27 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/17 20:04:48 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 //! Data structures
 # include "ft_pair.h"
 # include "ft_matrix.h"
+# include "ft_vector.h"
 # include "ft_bstree.h"
 # include "ft_dictionary.h"
 # include "ft_linked_list.h"

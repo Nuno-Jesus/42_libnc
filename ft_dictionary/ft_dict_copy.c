@@ -31,7 +31,6 @@ t_dict	*ft_dict_copy(t_dict *dict)
 	t_dict	*copy;
 
 	copy = ft_dict_new(dict->keycmp, dict->keycpy, dict->keydel, dict->keystr);
-	// ft_dict_keys_setup(copy, dict->keycmp, dict->keycpy, dict->keydel);
 	ft_dict_values_setup(copy, dict->valcpy, dict->valdel, dict->valstr);
 	if (!copy)
 		return (NULL);

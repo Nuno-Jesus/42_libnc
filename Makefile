@@ -25,7 +25,8 @@ MK		= --no-print-directory
 
 DEPS			= includes 
 SRCS			= .
-_SUBFOLDERS		= binary_search_tree conversions dictionary is linked_list matrix memory pair print str
+_SUBFOLDERS		= binary_search_tree conversions dictionary is linked_list \
+					matrix memory pair print str vector
 VPATH			= srcs $(addprefix $(SRCS)/ft_, $(_SUBFOLDERS))
 OBJ_DIR			= bin
 
@@ -50,6 +51,8 @@ _PAIR 			= pair_new pair_print pair_copy pair_swap pair_delete pair_tostring \
 _MATRIX			= matrix_new matrix_delete matrix_size matrix_copy matrix_append \
 					matrix_print
 
+_VECTOR			= vector_new vector_push
+
 _DICTIONARY 	= dict_new dict_insert dict_copy dict_get dict_exists dict_remove \
 					dict_values_setup dict_keys_setup dict_clear dict_delete dict_to_list \
 					dict_keys dict_values dict_print
@@ -62,7 +65,7 @@ _BINARY_TREE	= bstree_new bstree_insert bstree_traverse bstree_delete bstree_cle
 					bstree_height bstree_to_list
 
 _FILES			= $(_BINARY_TREE) $(_CONVERSIONS) $(_DICTIONARY) $(_IS) $(_LINKED_LISTS) \
-					$(_MATRIX) $(_MEMORY) $(_PAIR) $(_PRINT) $(_STR)
+					$(_MATRIX) $(_MEMORY) $(_PAIR) $(_PRINT) $(_STR) $(_VECTOR)
 
 OBJS			= $(_FILES:%=ft_%.o)
 TARGET			= $(addprefix $(OBJ_DIR)/, $(OBJS))
