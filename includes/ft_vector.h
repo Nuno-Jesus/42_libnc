@@ -53,4 +53,8 @@ t_vector	*ft_vector_merge(t_vector *v1, t_vector *v2);
 
 void		ft_vector_print(t_vector *vector);
 
+void		*ft_vector_first(t_vector *vector);
+
+void		*ft_vector_last(t_vector *vector);
+
 #endif
