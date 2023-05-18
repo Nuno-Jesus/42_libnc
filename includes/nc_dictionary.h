@@ -22,7 +22,7 @@
 # include <unistd.h>
 # include <ctype.h>
 
-# include "nc_bstree.h"
+# include "nc_binary_search_tree.h"
 # include "nc_pair.h"
 
 //Shell command to rename all files in a directory:

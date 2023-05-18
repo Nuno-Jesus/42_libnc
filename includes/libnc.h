@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 18:50:44 by crypto            #+#    #+#             */
-/*   Updated: 2023/05/18 15:03:13 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/18 15:27:39 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # include "nc_pair.h"
 # include "nc_matrix.h"
 # include "nc_vector.h"
-# include "nc_bstree.h"
+# include "nc_binary_search_tree.h"
 # include "nc_dictionary.h"
 # include "nc_linked_list.h"
 
