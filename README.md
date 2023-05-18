@@ -2,7 +2,7 @@
 
 
 ## 📒 **About**
-This project is all about writing down a useful set of functions to later on be used on future projects. All the code was implemented by me and based on the version of the subject available from the moment of the kickoff here in Porto, <strong>2<sup>nd</sup> November 2022</strong>.
+This library is an augment of the 42 library. It was designed to contain more data structures (other than just linked lists) to be used in the 42 projects. The library is still under development and more data structures and functions might be added in the future. Consider this as an early access version.
 
 ## 🚨 **Disclaimer**
 At 42, the C projects are built following a bunch of rules that enforce good coding style. Some of them are:
@@ -10,215 +10,50 @@ At 42, the C projects are built following a bunch of rules that enforce good cod
 	- No for, do while, switch, case or goto are allowed
 	- No more than 25 lines per function and 5 functions per file
 	- No assigns and declarations in the same line (unless static)
-	- No more than 5 variables in 1 function
+	- No more than 5 local variables in 1 function
+	- No more than 4 parameters per function
 	... 
 
 ## 🔧 **Implementation**
-<table>
-	<thead>
-		<tr>
-			<th>Part / Total Functions</th>
-			<th>Function Name</th>
-			<th>Implemented</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td rowspan=23><strong>Mandatory (I) / 23</strong></td>
-			<td>ft_atoi</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_bzero</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_calloc</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_isalnum</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_isalpha</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_isascii</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_isdigit</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_isprint</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_memchr</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_memcmp</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_memcpy</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_memmove</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_memset</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_strchr</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_strdup</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_strlcat</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_strlcpy</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_strlen</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_strncmp</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_strnstr</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_strrchr</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_tolower</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_toupper</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td rowspan=11><strong>Mandatory (II) / 11</strong></td>
-			<td>ft_itoa</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_putchar_fd</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_putendl_fd</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_putnbr_fd</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_putstr_fd</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_split</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_striteri</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_strjoin</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_strmapi</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_strtrim</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_substr</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td rowspan=9><strong>Bonus Part / 9</strong></td>
-			<td>ft_list_add_back</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_list_add_front</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_list_clear</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_list_delone</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_list_iter</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_list_last</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_list_map</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_list_new</td>
-			<td>✅</td>
-		</tr>
-		<tr>
-			<td>ft_list_size</td>
-			<td>✅</td>
-		</tr>
-	</tbody>
-</table>
+The `libnc` is composed of what I like to call modules. Each module is a data structure or a set of functions that are related to each other. Each module is composed of a header file and a source file.
 
+## 📚 **Modules**
+There are the legacy modules that are already present in the 42 library (and some more)...
 
+| Module | Description |
+| ------ | ----------- |
+| [**nc_conversions**](/includes/nc_conversions.h) | Functions to convert between data types |
+| [**nc_is**](/includes/nc_is.h) | Functions that return booleans |
+| [**nc_memory**](/includes/nc_memory.h) | Functions to manipulate memory |
+| [**nc_print**](/includes/nc_print.h) | Functions to print to file descriptors |
+| [**nc_str**](/includes/nc_str.h) | Functions to manipulate strings |
+| [**nc_linked_list**](/includes/nc_linked_list.h) | Functions to manipulate linked lists |
+
+... and the new ones, mainly data structures, which I missed during my time at 42. C doesn't have a lot of data structures, so I decided to implement some of them, even though they are not the most understandable ones.
+
+| Module | Description |
+| ------ | ----------- |
+| [**nc_binary_search_tree**](/includes/nc_binary_search_tree.h) | Functions to manipulate Binary Search Trees (BST) |
+| [**nc_dictionary**](/includes/nc_dictionary.h) | Functions to manipulate `Python` dictionaries / `C++` maps |
+| [**nc_matrix**](/includes/nc_matrix.h) | Functions to manipulate matrices |
+| [**nc_pair**](/includes/nc_pair.h) | Functions to manipulate `C++` pairs |
+| [**nc_vector**](/includes/nc_vector.h) | Functions to manipulate `C++` vectors |
 
 ## 📦 **Compilation**
-To compile the library you can either run `make` or `make bonus` in the terminal. The rule `make` will only compile the mandatory part of this work, while the `make bonus` rule will compile both the mandatory and the bonus part together.
+To compile the library you should run `make` in the terminal. 
 
-Both rules generate a `libft.a` file, which is zipped version of all the object files. Imagine you have a `main.c` file and you want to use your library in it. You can compile it by running the following command:
+Both rules generate a `libnc.a` file, which is zipped version of all the object files. Imagine you have a `main.c` file and you want to use your library in it. You can compile it by running the following command:
 
 ```sh
-$ cc -Wall -Wextra -Werror main.c -lft -L (REPLACE BY PATH TO libft.a) -I (REPLACE BY PATH TO libft.h)
+$ cc -Wall -Wextra -Werror main.c -lnc -L path/to/libnc/ -I path/to/libnc/header/folder
 ```
 
+or
 
-## 💫 **Testing**
-
-This project was tested using the [libft-unit-tester](https://github.com/alelievr/libft-unit-test) and manual revision only.
-
+```sh
+$ cc -Wall -Wextra -Werror main.c path/to/libnc/libnc.a -I path/to/libnc/header/folder
+```
 
 ## 📞 **Contact me**
-
 Feel free to ask me any questions through Slack (**ncarvalh**).
 

@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 18:50:44 by crypto            #+#    #+#             */
-/*   Updated: 2023/05/17 21:57:57 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/18 15:03:13 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 # define LIBNC_H
 
 //! Standard libraries and some more
-# include "ft_is.h"
-# include "ft_str.h"
-# include "ft_print.h"
-# include "ft_memory.h"
-# include "ft_conversions.h"
+# include "nc_is.h"
+# include "nc_str.h"
+# include "nc_print.h"
+# include "nc_memory.h"
+# include "nc_conversions.h"
 
 //! Data structures
-# include "ft_pair.h"
-# include "ft_matrix.h"
-# include "ft_vector.h"
-# include "ft_bstree.h"
-# include "ft_dictionary.h"
-# include "ft_linked_list.h"
+# include "nc_pair.h"
+# include "nc_matrix.h"
+# include "nc_vector.h"
+# include "nc_bstree.h"
+# include "nc_dictionary.h"
+# include "nc_linked_list.h"
 
 //! Useful macros
 

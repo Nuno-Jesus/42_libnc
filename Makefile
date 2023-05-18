@@ -43,7 +43,7 @@ DEPS			= includes
 SRCS			= .
 _SUBFOLDERS		= binary_search_tree conversions dictionary is linked_list \
 					matrix memory pair print str vector
-VPATH			= srcs $(addprefix $(SRCS)/ft_, $(_SUBFOLDERS))
+VPATH			= srcs $(addprefix $(SRCS)/nc_, $(_SUBFOLDERS))
 OBJ_DIR			= bin
 
 #_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_
@@ -90,7 +90,7 @@ _BINARY_TREE	= bstree_new bstree_insert bstree_traverse bstree_delete bstree_cle
 _FILES			= $(_BINARY_TREE) $(_CONVERSIONS) $(_DICTIONARY) $(_IS) $(_LINKED_LISTS) \
 					$(_MATRIX) $(_MEMORY) $(_PAIR) $(_PRINT) $(_STR) $(_VECTOR)
 
-OBJS			= $(_FILES:%=ft_%.o)
+OBJS			= $(_FILES:%=nc_%.o)
 TARGET			= $(addprefix $(OBJ_DIR)/, $(OBJS))
 
 #_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_
