@@ -33,7 +33,7 @@ There are the legacy modules that are already present in the 42 library (and som
 
 | Module | Description |
 | ------ | ----------- |
-| [**nc_binary_search_tree**](/includes/nc_bstree.h) | Functions to manipulate Binary Search Trees (BST) |
+| [**nc_binary_search_tree**](/includes/nc_binary_search_tree.h) | Functions to manipulate Binary Search Trees (BST) |
 | [**nc_dictionary**](/includes/nc_dictionary.h) | Functions to manipulate `Python` dictionaries / `C++` maps |
 | [**nc_matrix**](/includes/nc_matrix.h) | Functions to manipulate matrices |
 | [**nc_pair**](/includes/nc_pair.h) | Functions to manipulate `C++` pairs |
