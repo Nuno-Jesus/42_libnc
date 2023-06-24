@@ -125,4 +125,10 @@ fclean: clean
 
 re: fclean all
 
+norm:
+	echo "\n\t$(BLUE)_/=\\_/=\\_/=\\_ *.h FILES _/=\\_/=\\_/=\\_$(RESET)\n"
+	norminette -R CheckDefine $(find . -type f -name "*.h")
+	echo "\n\t$(BLUE)_/=\\_/=\\_/=\\_ *.c FILES _/=\\_/=\\_/=\\_$(RESET)\n"
+	norminette -R checkForbiddenSourceHeader $(find . -type f -name "*.c")
+
 .SILENT:

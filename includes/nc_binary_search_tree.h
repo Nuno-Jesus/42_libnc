@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef NC_BSTREE_H
-# define NC_BSTREE_H
+#ifndef NC_BINARY_SEARCH_TREE_H
+# define NC_BINARY_SEARCH_TREE_H
 
 # include <stdio.h>
 # include <stdlib.h>
