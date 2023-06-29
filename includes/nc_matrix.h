@@ -26,11 +26,10 @@
  * 
  * @param lines The number of lines.
  * @param columns The number of columns
- * @return char** A pointer to the new matrix.
+ * @return void* A pointer to the new matrix.
  * @return NULL If the allocation fails.
  */
-void	**nc_matrix_new(size_t lines, size_t columns);
-
+void	*nc_matrix_new(size_t lines, size_t columns);
 /**
  * @brief Creates a duplicate of an existing matrix, using the copy function
  * to help on duplicating inner data.
