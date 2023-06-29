@@ -6,7 +6,7 @@
 /*   By: ncarvalh <ncarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 19:52:16 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/06/29 19:54:43 by ncarvalh         ###   ########.fr       */
+/*   Updated: 2023/06/29 19:59:02 by ncarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@
 # include <unistd.h>
 # include <ctype.h>
 
+/**
+ * @brief Checks how many digits the number will have
+ * 
+ * @param n The number to check
+ * @return int The size of the number
+ */
 int	nc_numlen(int n);
 
 #endif
