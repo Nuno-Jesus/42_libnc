@@ -55,6 +55,16 @@ void	*nc_matrix_copy(void *matrix, void *(*copy)());
 void	*nc_matrix_append(void *matrix, void *data, void *(*copy)());
 
 /**
+ * @brief Adds a new field of data to an existing matrix, by checking
+ * what the last position is and adding the data to the next one.
+ * 
+ * @param matrix The matrix to add data to.
+ * @param data The data to add.
+ * @return void* The pointer to the matrix passed as argument.
+ */
+void	*nc_matrix_add(void *matrix, void *data);
+
+/**
  * @brief Returns the size of a matrix.
  * 
  * @param matrix The matrix to get the size of.

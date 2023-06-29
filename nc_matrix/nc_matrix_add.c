@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   nc_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   nc_matrix_add.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncarvalh <ncarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/02 18:42:23 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/06/29 19:49:52 by ncarvalh         ###   ########.fr       */
+/*   Created: 2023/06/29 19:45:04 by ncarvalh          #+#    #+#             */
+/*   Updated: 2023/06/29 19:48:55 by ncarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libnc.h"
 
-void	nc_putendl_fd(char *s, int fd)
+void	*nc_matrix_add(void *matrix, void *data)
 {
-	if (fd < 0)
-		return ;
-	if (s)
-		nc_putstr_fd(s, fd);
-	nc_putchar_fd('\n', fd);
+	size_t	len;
+
+	len = nc_matrix_size(matrix);
+	((char **)matrix)[len] = data;
+	return (matrix);
 }
