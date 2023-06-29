@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libnc.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ncarvalh <ncarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 18:50:44 by crypto            #+#    #+#             */
-/*   Updated: 2023/05/18 15:27:39 by marvin           ###   ########.fr       */
+/*   Updated: 2023/06/29 20:04:29 by ncarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 # include "nc_binary_search_tree.h"
 # include "nc_dictionary.h"
 # include "nc_linked_list.h"
+# include "nc_utils.h"
 
 //! Useful macros
 
