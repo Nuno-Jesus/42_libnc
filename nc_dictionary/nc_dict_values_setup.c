@@ -12,8 +12,8 @@
 
 #include "libnc.h"
 
-void	nc_dict_values_setup(t_dict *dict, void *(*valcpy)(), void (*valdel)(), \
-	char *(*valstr)())
+void	nc_dict_values_setup(t_dict *dict, void *(*valcpy)(void *), \
+	void (*valdel)(void *), char *(*valstr)(void *))
 {
 	dict->valcpy = valcpy;
 	dict->valdel = valdel;

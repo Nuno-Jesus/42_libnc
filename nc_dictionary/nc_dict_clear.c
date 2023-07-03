@@ -12,7 +12,7 @@
 
 #include "libnc.h"
 
-static void	helper(t_bstree *tree, void (*keydel)(), void (*valdel))
+static void	helper(t_bstree *tree, void (*keydel)(void *), void (*valdel))
 {
 	if (!tree)
 		return ;

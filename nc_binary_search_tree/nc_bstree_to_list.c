@@ -12,7 +12,7 @@
 
 #include "libnc.h"
 
-t_list	*nc_bstree_to_list(t_bstree *tree, void *(*copy)())
+t_list	*nc_bstree_to_list(t_bstree *tree, void *(*copy)(void *))
 {
 	t_list	*left;
 	t_list	*right;

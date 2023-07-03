@@ -12,7 +12,7 @@
 
 #include "libnc.h"
 
-void	nc_bstree_delete(t_bstree *node, void (*del)())
+void	nc_bstree_delete(t_bstree *node, void (*del)(void *))
 {
 	if (!node)
 		return ;

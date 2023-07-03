@@ -12,7 +12,7 @@
 
 #include "libnc.h"
 
-static void	postorder(t_bstree **tree, void (*f)())
+static void	postorder(t_bstree **tree, void (*f)(void *))
 {
 	if (!(*tree))
 		return ;
@@ -22,7 +22,7 @@ static void	postorder(t_bstree **tree, void (*f)())
 	postorder(&(*tree)->left, f);
 }
 
-static void	preorder(t_bstree **tree, void (*f)())
+static void	preorder(t_bstree **tree, void (*f)(void *))
 {
 	if (!(*tree))
 		return ;
@@ -32,7 +32,7 @@ static void	preorder(t_bstree **tree, void (*f)())
 		(*f)(*tree);
 }
 
-static void	inorder(t_bstree **tree, void (*f)())
+static void	inorder(t_bstree **tree, void (*f)(void *))
 {
 	if (!(*tree))
 		return ;
@@ -42,7 +42,8 @@ static void	inorder(t_bstree **tree, void (*f)())
 	inorder(&(*tree)->left, f);
 }
 
-void	nc_bstree_traverse(t_bstree **tree, void (*f)(), t_traversal type)
+void	nc_bstree_traverse(t_bstree **tree, void (*f)(void *), \
+	t_traversal type)
 {
 	if (!tree)
 		return ;

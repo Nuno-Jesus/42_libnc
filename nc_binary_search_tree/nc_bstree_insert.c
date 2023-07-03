@@ -12,8 +12,8 @@
 
 #include "libnc.h"
 
-t_bstree	*nc_bstree_insert(t_bstree *tree, void *data, int (*cmp)(), \
-	uint32_t depth)
+t_bstree	*nc_bstree_insert(t_bstree *tree, void *data, \
+	int (*cmp)(void *, void *), uint32_t depth)
 {
 	if (!tree)
 		return (nc_bstree_new(data, depth));

@@ -12,8 +12,8 @@
 
 #include "libnc.h"
 
-t_dict	*nc_dict_new(int (*cmp)(), void *(*cpy)(), void (*del)(), \
-	char *(*str)())
+t_dict	*nc_dict_new(int (*cmp)(void *, void *), void *(*cpy)(void *), \
+	void (*del)(void *), char *(*str)(void *))
 {
 	t_dict	*dict;
 

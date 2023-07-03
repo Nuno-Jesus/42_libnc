@@ -12,7 +12,8 @@
 
 #include "libnc.h"
 
-static t_bstree	*helper(t_bstree *tree, void *(*keycpy)(), void *(*valcpy)())
+static t_bstree	*helper(t_bstree *tree, void *(*keycpy)(void *), \
+	void *(*valcpy)(void *))
 {
 	t_bstree	*node;
 	t_pair		*pair;
