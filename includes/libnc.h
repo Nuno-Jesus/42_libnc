@@ -6,7 +6,7 @@
 /*   By: ncarvalh <ncarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 18:50:44 by crypto            #+#    #+#             */
-/*   Updated: 2023/06/29 20:04:29 by ncarvalh         ###   ########.fr       */
+/*   Updated: 2023/06/29 20:05:10 by ncarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 # define LIBNC_H
 
 //! Standard libraries and some more
-# include "nc_is.h"
-# include "nc_str.h"
-# include "nc_print.h"
-# include "nc_memory.h"
-# include "nc_conversions.h"
+# include "../libnc/includes/nc_is.h"
+# include "../libnc/includes/nc_str.h"
+# include "../libnc/includes/nc_print.h"
+# include "../libnc/includes/nc_memory.h"
+# include "../libnc/includes/nc_conversions.h"
 
 //! Data structures
-# include "nc_pair.h"
-# include "nc_matrix.h"
-# include "nc_vector.h"
-# include "nc_binary_search_tree.h"
-# include "nc_dictionary.h"
-# include "nc_linked_list.h"
-# include "nc_utils.h"
+# include "../libnc/includes/nc_pair.h"
+# include "../libnc/includes/nc_matrix.h"
+# include "../libnc/includes/nc_vector.h"
+# include "../libnc/includes/nc_binary_search_tree.h"
+# include "../libnc/includes/nc_dictionary.h"
+# include "../libnc/includes/nc_linked_list.h"
+# include "../libnc/includes/nc_utils.h"
 
 //! Useful macros
 
