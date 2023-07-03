@@ -87,8 +87,8 @@ t_bstree	*nc_bstree_deepcopy(t_bstree *tree, void *(*copy)(void *));
  * @return t_bstree* The new tree
  * @return NULL If the allocation fails
  */
-t_bstree	*nc_bstree_insert(t_bstree *tree, void *data, int (*cmp)(void *, void *), \
-	uint32_t depth);
+t_bstree	*nc_bstree_insert(t_bstree *tree, void *data, \
+	int (*cmp)(void *, void *), uint32_t depth);
 
 /**
  * @brief Checks if a node exists in a tree using the data and the cmp
@@ -100,7 +100,8 @@ t_bstree	*nc_bstree_insert(t_bstree *tree, void *data, int (*cmp)(void *, void *
  * @return t_bstree* The node if it exists
  * @return NULL If the node doesn't exist
  */
-t_bstree	*nc_bstree_find(t_bstree *tree, void *data, int (*cmp)(void *, void *));
+t_bstree	*nc_bstree_find(t_bstree *tree, void *data, \
+	int (*cmp)(void *, void *));
 
 /**
  * @brief Deletes a node from a binary search tree

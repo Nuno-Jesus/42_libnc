@@ -20,7 +20,6 @@ void	nc_pair_print(t_pair *pair, char *(*keystr)(void *), \
 
 	if (!keystr || !valstr)
 		return ;
-
 	key = keystr(pair->key);
 	value = valstr(pair->value);
 	nc_putstr_fd("pair[", STDOUT_FILENO);
