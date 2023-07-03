@@ -12,7 +12,8 @@
 
 #include "libnc.h"
 
-void	nc_pair_clear(t_pair *pair, void (*keydel)(), void (*valdel)())
+void	nc_pair_clear(t_pair *pair, void (*keydel)(void *), \
+	void (*valdel)(void *))
 {
 	if (!pair)
 		return ;

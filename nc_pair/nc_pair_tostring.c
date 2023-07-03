@@ -12,7 +12,8 @@
 
 #include "libnc.h"
 
-char	*nc_pair_tostring(t_pair *pair, char *(*keystr)(), char *(*valistr)())
+char	*nc_pair_tostring(t_pair *pair, char *(*keystr)(void *), \
+	char *(*valistr)(void *))
 {
 	char	*key;
 	char	*value;

@@ -12,7 +12,7 @@
 
 #include "libnc.h"
 
-t_bstree	*nc_bstree_deepcopy(t_bstree *tree, void *(*copy)())
+t_bstree	*nc_bstree_deepcopy(t_bstree *tree, void *(*copy)(void *))
 {
 	t_bstree	*dup;
 

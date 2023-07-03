@@ -12,7 +12,7 @@
 
 #include "libnc.h"
 
-static void	display(t_bstree *node, void (*print)())
+static void	display(t_bstree *node, void (*print)(void *))
 {
 	uint32_t	i;
 

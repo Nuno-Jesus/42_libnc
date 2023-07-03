@@ -12,7 +12,7 @@
 
 #include "libnc.h"
 
-static void	*helper(t_bstree *tree, t_pair *tmp, int (*cmp)())
+static void	*helper(t_bstree *tree, t_pair *tmp, int (*cmp)(void *, void *))
 {
 	void	*value;
 	t_pair	*pair;

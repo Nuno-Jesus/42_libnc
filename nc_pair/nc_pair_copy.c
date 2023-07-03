@@ -12,7 +12,8 @@
 
 #include "libnc.h"
 
-t_pair	*nc_pair_copy(t_pair *pair, void *(*keycpy)(), void *(*valcpy)())
+t_pair	*nc_pair_copy(t_pair *pair, void *(*keycpy)(void *), \
+	void *(*valcpy)(void *))
 {
 	t_pair	*copy;
 	void	*key;

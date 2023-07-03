@@ -12,7 +12,8 @@
 
 #include "libnc.h"
 
-t_bstree	*nc_bstree_find(t_bstree *tree, void *data, int (*cmp)())
+t_bstree	*nc_bstree_find(t_bstree *tree, void *data, \
+	int (*cmp)(void *, void *))
 {
 	t_bstree	*node;
 
