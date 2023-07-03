@@ -13,13 +13,16 @@
 #include "libnc.h"
 
 void	nc_pair_print(t_pair *pair, char *(*keystr)(void *), \
-	char *(*valistr)(void *))
+	char *(*valstr)(void *))
 {
 	char	*key;
 	char	*value;
 
+	if (!keystr || !valstr)
+		return ;
+
 	key = keystr(pair->key);
-	value = valistr(pair->value);
+	value = valstr(pair->value);
 	nc_putstr_fd("pair[", STDOUT_FILENO);
 	nc_putstr_fd(key, STDOUT_FILENO);
 	nc_putstr_fd("]=", STDOUT_FILENO);

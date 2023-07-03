@@ -20,6 +20,8 @@ t_bstree	*nc_bstree_copy(t_bstree *node, void *(*copy)(void *))
 	data = node->data;
 	if (copy)
 		data = copy(node->data);
+	else
+		data = node->data;
 	dup = nc_bstree_new(data, node->depth);
 	if (!dup)
 		return (NULL);

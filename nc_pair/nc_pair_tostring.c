@@ -13,15 +13,17 @@
 #include "libnc.h"
 
 char	*nc_pair_tostring(t_pair *pair, char *(*keystr)(void *), \
-	char *(*valistr)(void *))
+	char *(*valstr)(void *))
 {
 	char	*key;
 	char	*value;
 	char	*tmp;
 	char	*res;
 
+	if (!pair || !keystr || !valstr)
+		return (NULL);
 	key = keystr(pair->key);
-	value = valistr(pair->value);
+	value = valstr(pair->value);
 	tmp = nc_strjoin("pair[\'", key);
 	res = nc_strjoin(tmp, "\']=\'");
 	free(tmp);

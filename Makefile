@@ -63,7 +63,7 @@ _CONVERSIONS 	= atoi itoa tochar tolower tonum toupper
 _PAIR 			= pair_new pair_print pair_copy pair_swap pair_delete pair_tostring \
 					pair_clear
 _MATRIX			= matrix_new matrix_delete matrix_size matrix_copy matrix_append \
-					matrix_print matrix_merge matrix_add 
+					matrix_print matrix_merge matrix_add matrix_join
 _VECTOR			= vector_new vector_push vector_pop vector_clear vector_delete \
 					vector_copy vector_at vector_find vector_merge vector_print \
 					vector_first vector_last 
