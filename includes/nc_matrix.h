@@ -26,11 +26,10 @@
  * 
  * @param lines The number of lines.
  * @param columns The number of columns
- * @return char** A pointer to the new matrix.
+ * @return void* A pointer to the new matrix.
  * @return NULL If the allocation fails.
  */
 void	*nc_matrix_new(size_t lines, size_t columns);
-
 /**
  * @brief Creates a duplicate of an existing matrix, using the copy function
  * to help on duplicating inner data.
@@ -55,16 +54,14 @@ void	*nc_matrix_copy(void *matrix, void *(*copy)());
 void	*nc_matrix_append(void *matrix, void *data, void *(*copy)());
 
 /**
- * @brief Appends a new field of data to a new matrix, by creating a new one
- * with the result.
+ * @brief Adds a new field of data to an existing matrix, by checking
+ * what the last position is and adding the data to the next one.
  * 
- * @note It does not free the memory of the original matrix
- * @param matrix The matrix to append the data to.
- * @param data The data to append.
- * @param copy The function containing the logic to copy the inner data.
- * @return void* A pointer to the new matrix with the appended data.
+ * @param matrix The matrix to add data to.
+ * @param data The data to add.
+ * @return void* The pointer to the matrix passed as argument.
  */
-void	*nc_matrix_append(void *matrix, void *data, void *(*copy)());
+void	*nc_matrix_add(void *matrix, void *data);
 
 /**
  * @brief Returns the size of a matrix.
