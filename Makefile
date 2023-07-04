@@ -55,7 +55,7 @@ OBJ_DIR			= bin
 
 NAME			= libnc.a
 
-_IS 			= isalnum isalpha isascii isdigit isprint
+_IS 			= isalnum isalpha isascii isdigit isprint isnum
 
 _STR			= replace replace_all split strchr strdup striteri strjoin strlcat \
 					strlcpy strlen strmapi strncmp strnstr strrchr strtrim substr
@@ -87,7 +87,7 @@ _BINARY_TREE	= bstree_new bstree_insert bstree_traverse bstree_delete bstree_cle
 					bstree_print bstree_copy bstree_deepcopy bstree_find bstree_count \
 					bstree_height bstree_to_list
 
-_UTILS			= numlen count	
+_UTILS			= numlen count
 
 _FILES			= $(_BINARY_TREE) $(_CONVERSIONS) $(_DICTIONARY) $(_IS) $(_LINKED_LISTS) \
 					$(_MATRIX) $(_MEMORY) $(_PAIR) $(_PRINT) $(_STR) $(_VECTOR) $(_UTILS)

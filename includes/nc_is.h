@@ -60,4 +60,15 @@ int		nc_isascii(int c);
  */
 int		nc_isprint(int c);
 
+/**
+ * @brief Checks if a given string represents a number, until
+ * one of the characters reaches a delimiter
+ * 
+ * @param str The string to parse
+ * @param delims The set of delimeters used to stop
+ * @return true If the string represents a number
+ * @return false Otherwise
+ */
+bool	nc_isnum(char *str, char *delims);
+
 #endif

@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   nc_strchr.c                                        :+:      :+:    :+:   */
+/*   nc_isnum.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncarvalh <ncarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/02 18:44:46 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/07/04 15:35:31 by ncarvalh         ###   ########.fr       */
+/*   Created: 2023/07/04 15:27:12 by ncarvalh          #+#    #+#             */
+/*   Updated: 2023/07/04 15:34:51 by ncarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libnc.h"
 
-char	*nc_strchr(const char *s, int c)
+bool	nc_isnum(char *str, char *delims)
 {
-	return (nc_memchr(s, c, nc_strlen(s) + 1));
+	if (*str == '-')
+		++str;
+	while (*str && !nc_strchr(delims, *str))
+		if (!nc_isdigit(*str++))
+			return (false);
+	return (true);
 }
