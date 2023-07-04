@@ -39,7 +39,7 @@ MK		= --no-print-directory
 #_                                                                                           _
 #_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_
 
-DEPS			= includes 
+DEPS			= ../includes 
 SRCS			= .
 _SUBFOLDERS		= binary_search_tree conversions dictionary is linked_list \
 					matrix memory pair print str utils vector
