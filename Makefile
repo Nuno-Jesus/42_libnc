@@ -64,7 +64,7 @@ _PRINT			= putchar_fd putendl_fd putnbr_fd putstr_fd
 
 _MEMORY			= bzero calloc memchr memcmp memcpy memmove memset
 
-_CONVERSIONS 	= atoi itoa tochar tolower tonum toupper
+_CONVERSIONS 	= atoi atof itoa tochar tolower tonum toupper
 
 _PAIR 			= pair_new pair_print pair_copy pair_swap pair_delete pair_tostring \
 					pair_clear
