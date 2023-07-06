@@ -6,7 +6,7 @@
 /*   By: ncarvalh <ncarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 19:52:16 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/07/04 15:15:47 by ncarvalh         ###   ########.fr       */
+/*   Updated: 2023/07/06 18:06:32 by ncarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
  * @param n The number to check
  * @return int The size of the number
  */
-int	nc_numlen(int n);
+int		nc_numlen(int n);
 
 /**
  * @brief Given a string, it counts the occurences of the char c
@@ -36,6 +36,14 @@ int	nc_numlen(int n);
  * @param c The character to search for
  * @return int The number of occurences 
  */
-int	nc_count(char *str, char c);
+int		nc_count(char *str, char c);
+
+/**
+ * @brief Frees the memory associated with ptr, only if ptr exists
+ * 
+ * @param ptr Pointer to be freed
+ */
+void	nc_free(void *ptr);
+
 
 #endif

@@ -87,7 +87,7 @@ _BINARY_TREE	= bstree_new bstree_insert bstree_traverse bstree_delete bstree_cle
 					bstree_print bstree_copy bstree_deepcopy bstree_find bstree_count \
 					bstree_height bstree_to_list
 
-_UTILS			= numlen count
+_UTILS			= numlen count free
 
 _FILES			= $(_BINARY_TREE) $(_CONVERSIONS) $(_DICTIONARY) $(_IS) $(_LINKED_LISTS) \
 					$(_MATRIX) $(_MEMORY) $(_PAIR) $(_PRINT) $(_STR) $(_VECTOR) $(_UTILS)
