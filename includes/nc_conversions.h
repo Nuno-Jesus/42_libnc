@@ -29,12 +29,12 @@
 int		nc_atoi(const char *nptr);
 
 /**
- * @brief Converts a string to a float
+ * @brief Converts a string to a double
  * 
  * @param str The string to convert
- * @return float The float converted from the string
+ * @return double The double converted from the string
  */
-float	nc_atof(char *str);
+double	nc_atof(char *str);
 
 /**
  * @brief Converts a lowecase character to an uppercase character

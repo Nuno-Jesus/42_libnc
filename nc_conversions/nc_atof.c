@@ -6,7 +6,7 @@
 /*   By: crypto <crypto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 16:31:32 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/07/23 14:56:00 by crypto           ###   ########.fr       */
+/*   Updated: 2023/08/03 13:06:29 by crypto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,9 @@ static int	power(int n, int power)
 	return (n);
 }
 
-float	nc_atof(char *str)
+double	nc_atof(char *str)
 {
-	float	nbr;
+	double	nbr;
 	int		n1;
 	int		n2;
 	int		len;
@@ -57,8 +57,8 @@ float	nc_atof(char *str)
 	len = 0;
 	get_numbers(str, &n1, &n2, &len);
 	if (n1 >= 0)
-		nbr = n1 + ((float) n2 / (float) power(10, len));
+		nbr = n1 + ((double) n2 / (double) power(10, len));
 	else
-		nbr = n1 - ((float) n2 / (float) power(10, len));
+		nbr = n1 - ((double) n2 / (double) power(10, len));
 	return (nbr);
 }
