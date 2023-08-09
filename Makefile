@@ -58,7 +58,8 @@ NAME	= libnc.a
 _FILES += isalnum isalpha isascii isdigit isprint isnum
 
 _FILES += replace replace_all split strchr strdup striteri strjoin strlcat \
-			strlcpy strlen strmapi strncmp strnstr strrchr strtrim substr
+			strlcpy strlen strclen strmapi strncmp strnstr strrchr strtrim \
+			substr
 
 _FILES += putchar_fd putendl_fd putnbr_fd putstr_fd
 
@@ -87,7 +88,7 @@ _FILES += bstree_new bstree_insert bstree_traverse bstree_delete bstree_clear \
 			bstree_print bstree_copy bstree_deepcopy bstree_find bstree_count \
 			bstree_height bstree_to_list
 
-_FILES += numlen count free
+_FILES += numlen count free clamp
 
 OBJS			= $(_FILES:%=nc_%.o)
 TARGET			= $(addprefix $(OBJ_DIR)/, $(OBJS))

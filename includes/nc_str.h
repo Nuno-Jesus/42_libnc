@@ -30,6 +30,17 @@
 size_t	nc_strlen(const char *s);
 
 /**
+ * @brief Counts the number of characters in a string until
+ * a one of the characters in delim is found.
+ * 
+ * @param s The string to count.
+ * @param delim The set of delimiters.
+ * @return size_t The number of characters in the string.
+ */
+size_t	nc_strclen(char *str, char *delim);
+
+
+/**
  * @brief Copies up to size - 1 characters from the NUL-terminated string src
  * to dst, NUL-terminating the result.
  * 

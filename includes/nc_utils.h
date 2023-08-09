@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   nc_utils.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ncarvalh <ncarvalh@student.42.fr>          +#+  +:+       +#+        */
+/*   By: crypto <crypto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 19:52:16 by ncarvalh          #+#    #+#             */
-/*   Updated: 2023/07/06 18:06:32 by ncarvalh         ###   ########.fr       */
+/*   Updated: 2023/08/09 21:24:09 by crypto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,17 @@ int		nc_count(char *str, char c);
  */
 void	nc_free(void *ptr);
 
+/**
+ * @brief Given an integer n, this function makes sure that n
+ * is between min and max. If n is greater than max, it returns
+ * max. If n is less than min, it returns min. Otherwise, it
+ * returns n.
+ * 
+ * @param n  The number to clamp
+ * @param min The lowest value
+ * @param max The biggest value
+ * @return The clamped number
+ */
+int		nc_clamp(int n, int min, int max);
 
 #endif
