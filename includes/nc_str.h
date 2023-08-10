@@ -39,7 +39,6 @@ size_t	nc_strlen(const char *s);
  */
 size_t	nc_strclen(char *str, char *delim);
 
-
 /**
  * @brief Copies up to size - 1 characters from the NUL-terminated string src
  * to dst, NUL-terminating the result.
