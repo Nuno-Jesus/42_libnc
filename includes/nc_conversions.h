@@ -34,7 +34,7 @@ int		nc_atoi(const char *nptr);
  * @param str The string to convert
  * @return double The double converted from the string
  */
-double	nc_atof(char *str);
+double	nc_atod(char *str);
 
 /**
  * @brief Converts a lowecase character to an uppercase character

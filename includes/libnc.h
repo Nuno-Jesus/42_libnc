@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libnc.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crypto <crypto@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ncarvalh <ncarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 18:50:44 by crypto            #+#    #+#             */
-/*   Updated: 2023/08/10 17:10:24 by crypto           ###   ########.fr       */
+/*   Updated: 2023/08/12 16:46:12 by ncarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@
 //! Useful macros
 
 // Returns the maximum between a and b
-# define MAX(a, b) ((a) > (b) ? (a) : (b))
+# define MAX(a, b)	((a) * (a > b) + (b) * (b > a))
 // Returns the minimum between a and b
-# define MIN(a, b) ((a) < (b) ? (a) : (b))
+# define MIN(a, b)	((a) * (a < b) + (b) * (b < a))
 // Returns the absolute value of x
-# define ABS(x) ((x) < 0 ? -(x) : (x))
+# define ABS(x) 	((x) * (x > 0) - (x) * (x < 0))
 
 // Returns 1 if x is odd, 0 otherwise
 # define ODD(x) ((x) & 1)

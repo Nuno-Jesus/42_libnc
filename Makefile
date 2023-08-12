@@ -65,7 +65,7 @@ _FILES += putchar_fd putendl_fd putnbr_fd putstr_fd
 
 _FILES += bzero calloc memchr memcmp memcpy memmove memset
 
-_FILES += atoi atof itoa tochar tolower tonum toupper
+_FILES += atoi atod itoa tochar tolower tonum toupper
 
 _FILES += pair_new pair_print pair_copy pair_swap pair_delete pair_tostring \
 			pair_clear
