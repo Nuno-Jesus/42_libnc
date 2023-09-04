@@ -59,7 +59,7 @@ _FILES += isalnum isalpha isascii isdigit isprint isnum
 
 _FILES += replace replace_all split strchr strdup striteri strjoin strlcat \
 			strlcpy strlen strclen strmapi strncmp strnstr strrchr strtrim \
-			substr
+			substr strcmp
 
 _FILES += putchar_fd putendl_fd putnbr_fd putstr_fd
 

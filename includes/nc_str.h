@@ -100,6 +100,18 @@ char	*nc_strrchr(const char *s, int c);
 char	*nc_strnstr(const char *big, const char *little, size_t len);
 
 /**
+ * @brief Compares the first n characters of the null-terminated 
+ * strings s1 and s2.
+ * 
+ * @param s1 The first string to be compared.
+ * @param s2 The second string to be compared.
+ * @param n The number of characters to compare
+ * @return int An integer greater than, equal to, or less than 0, according as
+ * the string s1 is greater than, equal to, or less than the string s2.
+ */
+int		nc_strncmp(const char *s1, const char *s2, size_t n);
+
+/**
  * @brief Compares the null-terminated strings s1 and s2.
  * 
  * @param s1 The first string to be compared.
@@ -107,7 +119,7 @@ char	*nc_strnstr(const char *big, const char *little, size_t len);
  * @return int An integer greater than, equal to, or less than 0, according as
  * the string s1 is greater than, equal to, or less than the string s2.
  */
-int		nc_strncmp(const char *s1, const char *s2, size_t n);
+int		nc_strcmp(char *s1, char *s2);
 
 /**
  * @brief Duplicates the string given in parameter
